@@ -1,0 +1,156 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+/*navbar*/
+.navbar{
+    margin: 0 100px;
+}
+
+.navbar .fixed-top {
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+}
+
+.collapse .navbar-nav a{
+    color: white;
+    margin: 0 20px;
+    padding: 10px;
+}
+
+.collapse .navbar-nav a:hover{
+    color: #FF9900;
+    transition: 0.4s;
+}
+
+.navbar-nav a.nav-link-active{
+    color: #FF9900;
+    text-decoration: none;
+}
+
+.navbar-nav .btn-outline-warning{
+    color: #FF9900;
+    border-radius: 7px;
+    font-size: medium;
+    width: 100px;
+    height: 40px;
+    margin-top:5px;
+    margin-left: 50px;
+    transition: 0.4s;
+}
+
+.navbar-nav .btn-outline-warning:hover{
+    color: black;
+    background-color: #FF9900;
+}
+
+.navbar-nav .btn-warning{
+    color: white;
+    background-color: #FF9900;
+    border-radius: 7px;
+    font-size: medium;
+    width: 100px;
+    height: 40px;
+    margin-top:5px;
+    margin-left: 20px;
+    transition: 0.4s;
+}
+
+.navbar-nav .btn-warning:hover{
+    color: black;
+    background-color: #FF9900;
+}
+
+/* jumbotron */
+
+.jumbotron{
+    background-image: url(jumbotron.png);
+    background-repeat: no-repeat;
+    background-color: #FF9900;
+    height: 700px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.jumbotron .main-1{
+    margin-top: 230px;
+}
+
+.jumbotron .main-1 h1{
+    color: white;
+    font-size: 50px;
+}
+
+.jumbotron .main-1 .button-main{
+    display: flex;
+    justify-content: space-around;
+}
+
+.jumbotron .main-1 .button-main button{
+    font-size: smaller;
+    color: white;
+    background-color: #FF9900;
+    border-radius: 8px;
+}
+
+.jumbotron .main-1 .button-main button:hover{
+    background-color: #ffffff;
+    color: #FF9900;
+    transition: 0.4s;
+}
+
+.jumbotron .main-2{
+    margin-top: 230px;
+}
+
+.jumbotron .main-2 img{
+    height: 190px;
+}
+
+.about h3{
+    color: #FF9900;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.about p{
+    padding: 0 180px;
+    text-align: center;
+}
+
+.about .container{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-items: center;
+    margin-top: 40px;
+    gap: 60px;
+}
+
+.about .container .card{
+    width: 350px;
+    height: 220px;
+    
+}
+
+.about .container .card h5{
+    margin: 30px 0 0 20px;
+}
+
+.about .container .card p{
+    padding: 30px 20px 0 20px;
+    text-align: justify;
+}
+
+.team{
+    background-color: #D9D9D9;
+}
+
+.team h3{
+    text-align: center;
+}
+
+.team p{
+    text-align: center;
+}
