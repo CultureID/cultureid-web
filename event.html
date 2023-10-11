@@ -9,6 +9,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
 
+    <link rel="stylesheet" href="assets/css/style.css">
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins');
 
@@ -34,7 +36,25 @@
     <script type="module" src="assets/js/event.js"></script>
 </head>
 
-<body>
+<body class="container">
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="" />
+            </div>
+            <div class="collapse navbar-collapse">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link-active" href="#home">Beranda</a>
+                    <a class="nav-link" href="event.html">Event</a>
+                    <a class="nav-link" href="#product">Provinsi</a>
+                    <a class="nav-link" href="#report">Kontak</a>
+                    <button type="button" class="btn btn-outline-warning">Masuk</button>
+                    <button type="button" class="btn btn-warning">Daftar</button>
+                </div>
+            </div>
+        </div>
+    </nav>
 
     <div id="mainCarousel" class="carousel slide mb-5">
         <div class="carousel-inner rounded-4" style="height: 350px;">
@@ -64,7 +84,9 @@
     <h5 style="color: var(--primary-color)" class="fw-bolder fs-2 mb-3">Telah Selesai</h5>
     <div id="ended-events" class="d-flex mb-5"></div>
 
-
+    <footer>
+        <p>Copyright © 2023 - CultureID</p>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
         integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
