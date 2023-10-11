@@ -16,8 +16,8 @@ body {
 /*navbar*/
 .navbar {
   background-color: transparent;
-  margin: 0 100px;
   transition: background-color 0.3s ease;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
 }
 
 .navbar .fixed-top {
@@ -27,7 +27,15 @@ body {
 }
 
 .navbar-scrolled {
-  background-color: #333;
+  background-color: white;
+}
+
+.container-fluid .logo {
+  margin-left: 100px;
+}
+
+.collapse .navbar-nav {
+  margin-right: 100px;
 }
 
 .collapse .navbar-nav a {
@@ -41,46 +49,18 @@ body {
   transition: 0.4s;
 }
 
-.navbar-nav a.nav-link-active {
+.collapse .navbar-nav a.nav-link-active {
   color: #ff9900;
   text-decoration: none;
 }
 
-.navbar-nav .btn-outline-warning {
-  color: #ff9900;
-  border-radius: 7px;
-  font-size: medium;
-  width: 100px;
+.collapse .navbar-nav input {
+  border-radius: 10px;
+  width: 160px;
   height: 40px;
-  margin-top: 5px;
-  margin-left: 50px;
-  transition: 0.4s;
-}
-
-.navbar-nav .btn-outline-warning:hover {
-  color: black;
-  background-color: #ff9900;
-}
-
-.navbar-nav .btn-warning {
-  color: white;
-  background-color: #ff9900;
-  border-radius: 7px;
-  font-size: medium;
-  width: 100px;
-  height: 40px;
-  margin-top: 5px;
-  margin-left: 20px;
-  transition: 0.4s;
-}
-
-.navbar-nav .btn-warning:hover {
-  color: black;
-  background-color: #ff9900;
 }
 
 /* jumbotron */
-
 .jumbotron {
   background-image: url("../images/jumbotron.png");
   background-repeat: no-repeat;
@@ -88,37 +68,38 @@ body {
   height: 700px;
   display: flex;
   justify-content: space-around;
+  padding: 0 100px;
 }
 
 .jumbotron .main-1 {
-  margin-top: 230px;
+  margin-top: 210px;
 }
 
 .jumbotron .main-1 h1 {
   color: white;
-  font-size: 50px;
+  font-size: 55px;
 }
 
-.jumbotron .main-1 .button-main {
-  display: flex;
-  justify-content: space-around;
+.jumbotron .main-1 p {
+  color: white;
+  margin-right: 10px
 }
 
-.jumbotron .main-1 .button-main button {
+.jumbotron .main-1 button {
   font-size: smaller;
   color: white;
   background-color: #ff9900;
   border-radius: 8px;
 }
 
-.jumbotron .main-1 .button-main button:hover {
+.jumbotron .main-1 button:hover {
   background-color: #ffffff;
   color: #ff9900;
   transition: 0.4s;
 }
 
 .jumbotron .main-2 {
-  margin-top: 230px;
+  margin-top: 270px;
 }
 
 .jumbotron .main-2 img {
@@ -148,6 +129,14 @@ body {
 .about .container .card {
   width: 350px;
   height: 220px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.2);
+}
+
+.about .container .card img {
+  height: 30px;
+  margin-top: -5px;
+  padding-right: 20px;
 }
 
 .about .container .card h5 {
@@ -155,58 +144,87 @@ body {
 }
 
 .about .container .card p {
-  padding: 30px 20px 0 20px;
+  padding: 20px 20px 0 20px;
+  font-size: 13px;
   text-align: justify;
 }
 
-/* tim kami */
-.tim {
-  background-color: white;
-  height: 650px;
-}
-
-.tim .bg-tim {
-  background-color: #d9d9d9;
-  height: 500px;
-}
-
-.tim h3 {
-  padding-top: 45px;
-  text-align: center;
-}
-
-.tim p {
-  margin-top: -15px;
-  text-align: center;
-}
-
-.tim .container-tim {
+/* informasi */
+.informasi {
+  padding: 0 210px;
   display: grid;
-  grid-template-columns: auto auto auto;
-  justify-items: center;
-  margin-bottom: 20px;
-  gap: 20px;
-}
-
-.tim .container-tim .card-tim {
-  height: 260px;
-  width: 240px;
+  grid-template-areas: "infor-1 info-2 info-3";
+  grid-template-columns: 0.6fr 0.2fr 0.2fr;
   background-color: #ff9900;
 }
 
-.tim .container-tim .card-tim img {
-  display: block;
-  margin: 20px auto 0 auto;
-  height: 200px;
+.informasi h6 {
+  color: white;
+  margin-top: 30px;
 }
 
-.tim .container-tim .card-tim p {
-  margin-top: 15px;
+.informasi .info-1 p {
+  color: white;
+  font-size: 13px;
 }
 
-footer {
-  margin-top: 20px;
-  margin-bottom: -15px;
-  border-top: 0.3px solid #d9d9d9;
+.informasi .info-2 p {
+  color: white;
+  font-size: 13px;
+}
+
+.informasi .info-2 .text-1 p{
+  border-bottom: 0.1px solid rgba(0, 0, 0, 0.2);
+  width: 130px;
+  padding-bottom: 5px;
+}
+
+.informasi .info-2 .text-2 p{
+  border-bottom: 0.1px solid rgba(0, 0, 0, 0.2);
+  width: 130px;
+  margin-top: -15px;
+  padding-bottom: 5px;
+}
+
+.informasi .info-2 .text-3 p{
+  margin-top: -15px;
+}
+
+.informasi .info-3 {
+  margin-left: 50px;
+}
+
+.informasi .info-3 i {
+  color: white;
+  background-color: #FDCA7E;
+  width: 25px;
+  height: 25px;
+  border-radius: 20px;
+  padding-top: 2px;
   text-align: center;
+  font-size: 20px;
+}
+
+.informasi .info-3 i:hover{
+  background-color: #ffffff;
+  color: black;
+  transition: 0.3s;
+}
+
+footer{
+  background-color: #E58A00;
+  color: white;
+  margin-bottom: -16px;
+  text-align: center;
+  height: 50px;
+}
+
+footer h6{
+  padding-top: 10px;
+  font-size: 15px;
+}
+
+footer p {
+  font-size: 11px;
+  margin-top: -10px;
 }
