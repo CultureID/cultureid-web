@@ -5,7 +5,7 @@ const events = [
         city: "Daerah Istimewa Yogyakarta",
         is_free: true,
         fee: 0,
-        date: "2023-10-04",
+        date: "2023-10-13",
         thumbnail: 'grebek-maulud.png'
     },
     {
@@ -14,7 +14,7 @@ const events = [
         city: "Kota Surakarta",
         is_free: true,
         fee: 0,
-        date: "2023-10-08",
+        date: "2023-10-14",
         thumbnail: 'kauman-batik-art-festival.png'
     },
     {
@@ -48,8 +48,8 @@ const events = [
         name: "Attack on Titan: The Final Exhibition",
         location: "Jl. Panjang No.5 Kebon Jeruk, Kec. Kb Jeruk",
         city: "Kota Jakarta Barat",
-        is_free: false,
-        fee: 100000,
+        is_free: true,
+        fee: 0,
         date: "2023-09-22",
         thumbnail: 'aot-the-final-exhibition.png'
     },

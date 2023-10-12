@@ -9,8 +9,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
 
-    <link rel="stylesheet" href="assets/css/style.css">
-
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins');
 
@@ -25,68 +23,162 @@
         body {
             font-family: var(--font-family);
             color: var(--dark-color);
-            padding: 6px;
+        }
+
+        .navbar-brand {
+            color: #FF9900;
+            font-weight: bold;
+        }
+
+        .nav-item {
+            margin-right: 30px;
+        }
+
+        .nav-item a {
+            color: #202020;
+        }
+
+        .navbar-nav .nav-item a.active {
+            color: #FF9900 !important;
+            font-weight: bold;
+        }
+
+        .search {
+            border-radius: 50px;
         }
 
         .card-title {
             size: 14pt;
+        }
+
+        footer {
+            background-color: #EE9322;
+            color: #FFF;
+            padding-top: 32px;
+        }
+
+        .copyright {
+            text-align: center;
+            height: 78px;
+            background-color: #E58A00;
+            color: #FFF;
+            padding: 20px 0;
         }
     </style>
 
     <script type="module" src="assets/js/event.js"></script>
 </head>
 
-<body class="container">
+<body>
 
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container-fluid">
-            <div class="logo">
-                <img src="assets/images/logo.png" alt="" />
-            </div>
-            <div class="collapse navbar-collapse">
-                <div class="navbar-nav ms-auto">
-                    <a class="nav-link-active" href="#home">Beranda</a>
-                    <a class="nav-link" href="event.html">Event</a>
-                    <a class="nav-link" href="#product">Provinsi</a>
-                    <a class="nav-link" href="#report">Kontak</a>
-                    <button type="button" class="btn btn-outline-warning">Masuk</button>
-                    <button type="button" class="btn btn-warning">Daftar</button>
-                </div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">CultureID</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="event.html">Event</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="provinsi.html">Provinsi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Kontak</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control search me-2" type="search" placeholder="Cari informasi..."
+                        aria-label="Search">
+                </form>
             </div>
         </div>
     </nav>
+    <!-- Navbar -->
 
-    <div id="mainCarousel" class="carousel slide mb-5">
-        <div class="carousel-inner rounded-4" style="height: 350px;">
-            <div class="carousel-item active">
-                <img src="assets/images/events/hero.png" class="d-block w-100" alt="Hero">
+    <section class="content">
+        <div class="container mt-5">
+            <div id="mainCarousel" class="carousel slide mb-5">
+                <div class="carousel-inner rounded-4" style="height: 350px;">
+                    <div class="carousel-item active">
+                        <img src="assets/images/events/hero.png" class="d-block w-100" alt="Hero">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/images/events/hero.png" class="d-block w-100" alt="Hero">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/images/events/hero.png" class="d-block w-100" alt="Hero">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
-            <div class="carousel-item">
-                <img src="assets/images/events/hero.png" class="d-block w-100" alt="Hero">
-            </div>
-            <div class="carousel-item">
-                <img src="assets/images/events/hero.png" class="d-block w-100" alt="Hero">
+
+            <h5 style="color: var(--primary-color)" class="fw-bolder fs-2 mb-3">Event Mendatang</h5>
+            <div id="upcoming-events" class="d-flex mb-5"></div>
+
+            <h5 style="color: var(--primary-color)" class="fw-bolder fs-2 mb-3">Telah Selesai</h5>
+            <div id="ended-events" class="d-flex mb-5"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container pb-2">
+            <div class="row justify-content-center">
+                <div class="col-md-5">
+                    <h5 class="fw-semibold">CultureID</h5>
+                    <p class="mb-0">Jalan Pangeran Antasari, Ciapa Hayo, Kota Jakarta Selatan Daerah Khusus Ibukota
+                        Jakarta 66666
+                    </p>
+                    <p class="mb-0"><span class="fw-bold">Phone:</span> (62) 3132 2323 2332</p>
+                    <p><span class="fw-bold">Email:</span> cultureid@gmail.com</p>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="fw-semibold">Link Terkait</h5>
+                    <ul class="navbar-nav">
+                        <li class="border-bottom">
+                            <a class="nav-link" href="index.html">Beranda</a>
+                        </li>
+                        <li class="border-bottom">
+                            <a class="nav-link" href="event.html">Event</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="provinsi.html">Provinsi</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="fw-semibold">Sosial Media</h5>
+                    <a href="https://instagram.com/instagram" target="_blank" class="mx-1"><img
+                            src="assets/images/ic_instagram.svg" alt=""></a>
+                    <a href="https://www.tiktok.com/@tiktok?lang=id-ID" target="_blank" class="mx-1"><img
+                            src="assets/images/ic_tiktok.svg" alt=""></a>
+                    <a href="https://www.youtube.com/@YouTube" target="_blank" class="mx-1"><img
+                            src="assets/images/ic_youtube.svg" alt=""></a>
+                </div>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-
-    <h5 style="color: var(--primary-color)" class="fw-bolder fs-2 mb-3">Event Mendatang</h5>
-    <div id="upcoming-events" class="d-flex mb-5"></div>
-
-    <h5 style="color: var(--primary-color)" class="fw-bolder fs-2 mb-3">Telah Selesai</h5>
-    <div id="ended-events" class="d-flex mb-5"></div>
-
-    <footer>
-        <p>Copyright © 2023 - CultureID</p>
+        <div class="copyright">
+            <p class="mb-0"><strong>&copy; CultureID.</strong> All Right Reserverd</p>
+            <p class="mb-0" style="font-size: 12px;">Developed by Group 11 Afternoon C</p>
+        </div>
     </footer>
+    <!-- Footer -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
         integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
