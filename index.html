@@ -1,161 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
 
-    <!--link css-->
-    <link rel="stylesheet" href="assets/css/style.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <title>CultureID</title>
+</head>
 
-    <!--link bootstrap-->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-
-    <!--link font awesome-->
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-  </head>
-
-  <body>
-    <nav class="navbar navbar-expand-lg fixed-top">
-      <div class="container-fluid">
-        <div class="logo">
-          <img src="assets/images/logo.png" alt="" />
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">CultureID</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item beranda">
+                        <a class="nav-link active" href="index.html">Beranda</a>
+                    </li>
+                    <li class="nav-item beranda">
+                        <a class="nav-link" href="event.html">Event</a>
+                    </li>
+                    <li class="nav-item beranda">
+                        <a class="nav-link" href="provinsi.html">Provinsi</a>
+                    </li>
+                    <li class="nav-item beranda">
+                        <a class="nav-link" href="kontak.html">Kontak</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control search me-2" type="search" placeholder="Cari informasi..."
+                        aria-label="Search">
+                </form>
+            </div>
         </div>
-        <div class="collapse navbar-collapse">
-          <div class="navbar-nav ms-auto">
-            <a class="nav-link-active" href="#home">Beranda</a>
-            <a class="nav-link" href="event.html">Event</a>
-            <a class="nav-link" href="#prov">Provinsi</a>
-            <a class="nav-link" href="#report">Kontak</a>
-            <form class="d-flex">
-              <input
-                class="form-control bx bx-search-alt-2"
-                type="search"
-                placeholder="Cari Informasi..."
-                aria-label="Cari Informasi"
-              />
-            </form>
-          </div>
-        </div>
-      </div>
     </nav>
+    <!-- Navbar -->
 
-    <div class="jumbotron">
-      <div class="main-1">
-        <h1>
-          Selamat Datang di <br />
-          CultureID
-        </h1>
-        <p>
-          Sebuah plaftorm website untuk memperkenalkan dan melestarikan budaya
-          Indonesia kepada generasi muda dengan menyajikan informasi event
-          kebudayaan secara gratis dan informasi dari berbagai aspek seperti
-          budaya, kuliner, dan destinasi wisata.
-        </p>
-        <button type="button" class="btn">Ayo Eklsplorasi</button>
-      </div>
-      <div class="main-2">
-        <img src="assets/images/3D.png" alt="" />
-      </div>
-    </div>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h1 class="mb-4">Menjelahahi Kebudayaan Indonesia<br>dengan Hanya Satu Klik</h1>
+                    <p class="mb-4">Website ini membantu Anda untuk mengenal lebih dekat budaya<br>Indonesia yang kaya
+                        dan beragam
+                        melalui informasi event kebudayaan<br>secara gratis, kuliner enak, dan destinasi wisata yang
+                        menarik
+                    </p>
+                    <a href="provinsi.html" class="btn btn-eksplorasi">Ayo Eksplorasi</a>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col">
+                    <img src="assets/images/3d.png">
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header -->
 
-    <div class="about">
-      <h3><b>Kenapa CultureID?</b></h3>
-      <p>
-        Portal informasi yang memaparkan kekayaan budaya Indonesia dalamberbagai
-        aspek, termasuk informasi umum, budaya, kuliner, dan destinasiwisata.
-      </p>
-      <div class="container">
-        <div class="card">
-          <h5>
-            <img src="assets/images/informasi.png" alt="" /><b
-              >Informasi Event Gratis</b
-            >
-          </h5>
-          <p>
-            CultureID memberikan gambaran lengkap tentang Indonesia, mulai dari
-            sejarah, geografi, hingga keanekaragaman budaya.
-          </p>
-        </div>
-        <div class="card">
-          <h5><img src="assets/images/budaya.png" alt="" /><b>Budaya</b></h5>
-          <p>
-            CultureID memberikan gambaran lengkap tentang sejarah, geografi dan
-            mengajak pengunjung untuk menjelajahi keanekaragaman budaya
-            Indonesia dari Sabang hingga Merauke.
-          </p>
-        </div>
-        <div class="card">
-          <h5><img src="assets/images/kuliner.png" alt="" /><b>Kuliner</b></h5>
-          <p>
-            CultureID memberikan informasi mengenai kuliner Indonesia yang
-            terkenal di berbagai belahan dunia.
-          </p>
-        </div>
-        <div class="card">
-          <h5>
-            <img src="assets/images/destinasi.png" alt="" /><b
-              >Destinasi Wisata</b
-            >
-          </h5>
-          <p>
-            CultureID menyajikan berbagai informasi mengenai destinasi wisata
-            Indonesia, mulai dari wisata alam, sejarah, hingga wisata kuliner.
-          </p>
-        </div>
-      </div>
-    </div>
+    <!-- Isi kontennya -->
+    <section class="content">
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col text-center">
+                    <h1>Kenapa CultureID?</h1>
+                    <p>Portal informasi yang memaparkan kekayaan budaya Indonesia dalam berbagai aspek,<br>
+                        termasuk informasi umum, budaya, kuliner, dan destinasi wisata.</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-5 m-4">
+                    <div class="card p-4 shadow border-0">
+                        <h5>
+                            <img class="me-4" src="assets/images/ic_info.png" alt="" /><b>Informasi Event Gratis</b>
+                        </h5>
+                        <p>CultureID memberikan informasi terkait event-event kebudayaan yang diadakan di seluruh
+                            Indonesia secara gratis.</p>
+                    </div>
+                </div>
+                <div class="col-md-5 m-4">
+                    <div class="card p-4 shadow border-0">
+                        <h5>
+                            <img class="me-4" src="assets/images/ic_budaya.png" alt="" /><b>Budaya</b>
+                        </h5>
+                        <p>CultureID memberikan gambaran lengkap tentang sejarah, geografi dan mengajak pengunjung untuk
+                            menjelajahi keanekaragaman budaya Indonesia dari Sabang hingga Merauke.</p>
+                    </div>
+                </div>
+                <div class="col-md-5 m-4">
+                    <div class="card p-4 shadow border-0">
+                        <h5>
+                            <img class="me-4" src="assets/images/ic_kuliner.png" alt="" /><b>Kuliner</b>
+                        </h5>
+                        <p>CultureID memberikan informasi mengenai kuliner Indonesia yang terkenal di berbagai belahan
+                            dunia.</p>
+                    </div>
+                </div>
+                <div class="col-md-5 m-4">
+                    <div class="card p-4 shadow border-0">
+                        <h5>
+                            <img class="me-4" src="assets/images/ic_destinasi.png" /><b>Destinasi Wisata</b>
+                        </h5>
+                        <p>CultureID menyajikan berbagai informasi mengenai destinasi wisata Indonesia, mulai dari
+                            wisata alam, sejarah, hingga wisata kuliner.</p>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- Isi kontennya -->
 
-    <div class="informasi">
-      <div class="info-1">
-        <h6>CultureID</h6>
-        <p>
-          Jalan Pangeran Antasari, Ciapa Hayo <br />
-          Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 66666 <br />
-          <b>Phone:</b> (62) 3132 2323 2332 <br />
-          <b>Email:</b> cultureid@gmail.com
-        </p>
-      </div>
-      <div class="info-2">
-        <h6>Link Terkait</h6>
-        <div class="text-1">
-          <p>Beranda</p>
-        </div>
-        <div class="text-2">
-          <p>Event</p>
-        </div>
-        <div class="text-3">
-          <p>Provinsi</p>
-        </div>
-      </div>
-      <div class="info-3">
-        <h6>Social Media</h6>
-        <a href="#"><i class="bx bxl-instagram"></i></a>
-        <a href="#"><i class="bx bxl-tiktok"></i></a>
-        <a href="#"><i class="bx bxl-facebook"></i></a>
-        <a href="#"><i class="bx bxl-youtube"></i></a>
-      </div>
-    </div>
 
+    <!-- Footer -->
     <footer>
-      <h6><b>© CultureID.</b> All Right Reserved</h6>
-      <p>Developed by Group 11 Afternoon C</p>
+        <div class="container pb-2">
+            <div class="row justify-content-center">
+                <div class="col-md-5">
+                    <h5 class="fw-semibold">CultureID</h5>
+                    <p class="mb-0">Jalan Pangeran Antasari, Ciapa Hayo, Kota Jakarta Selatan Daerah Khusus Ibukota
+                        Jakarta 66666
+                    </p>
+                    <p class="mb-0"><span class="fw-bold">Phone:</span> (62) 3132 2323 2332</p>
+                    <p><span class="fw-bold">Email:</span> cultureid@gmail.com</p>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="fw-semibold">Link Terkait</h5>
+                    <ul class="navbar-nav">
+                        <li class="border-bottom">
+                            <a class="nav-link" href="index.html">Beranda</a>
+                        </li>
+                        <li class="border-bottom">
+                            <a class="nav-link" href="event.html">Event</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="provinsi.html">Provinsi</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5 class="fw-semibold">Sosial Media</h5>
+                    <a href="https://instagram.com/instagram" target="_blank" class="mx-1"><img
+                            src="assets/images/ic_instagram.svg" alt=""></a>
+                    <a href="https://www.tiktok.com/@tiktok?lang=id-ID" target="_blank" class="mx-1"><img
+                            src="assets/images/ic_tiktok.svg" alt=""></a>
+                    <a href="https://www.youtube.com/@YouTube" target="_blank" class="mx-1"><img
+                            src="assets/images/ic_youtube.svg" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p class="mb-0"><strong>&copy; CultureID.</strong> All Right Reserverd</p>
+            <p class="mb-0" style="font-size: 12px;">Developed by Group 11 Afternoon C</p>
+        </div>
     </footer>
+    <!-- Footer -->
 
-    <script src="assets/js/script.js"></script>
-  </body>
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>

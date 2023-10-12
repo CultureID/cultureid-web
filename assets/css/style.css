@@ -1,230 +1,119 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins");
-
-:root {
-  --primary-color: #ff9900;
-  --secondary-color: #e58a00;
-  --dark-color: #272727;
-  --light-color: #6c6c6c;
-  --font-family: "Poppins", sans-serif;
+* {
+    font-family: 'Poppins', sans-serif;
 }
 
-body {
-  margin: 0px;
-  padding: 0px;
+header {
+    background-image: url('../images/background.jpg');
+    min-height: 100vh;
+    padding: 250px 0 165px;
+    margin-top: -60px;
 }
 
-/*navbar*/
-.navbar {
-  background-color: transparent;
-  transition: background-color 0.3s ease;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+header h1 {
+    font-family: 'Playfair Display', serif;
+    color: #F5F5F5;
+    font-weight: 600;
+    font-size: 46px;
+}
+header p {
+    font-size: 14px;
+    color: #DCDCDC;
+    font-weight: 500;
 }
 
-.navbar .fixed-top {
-  position: fixed;
-  top: 0;
-  z-index: 9999;
+header .btn-eksplorasi {
+    background-color: #EE9322;
+    width: 252px;
+    height: 45px;
+    padding: 10px 0;
+    color: #FFFFFF;
+    font-weight: bold;
 }
 
-.navbar-scrolled {
-  background-color: white;
+header .btn-eksplorasi:hover {
+    background-color: #e67e00;
+    color: #FFFFFF;
 }
 
-.container-fluid .logo {
-  margin-left: 100px;
+.content h1 {
+    font-family: 'Playfair Display', serif;
+    color: #FF9900;
+    font-weight: 600;
+    font-size: 46px;
 }
 
-.collapse .navbar-nav {
-  margin-right: 100px;
+.content p {
+    font-size: 14px;
+    font-weight: lighter;
 }
 
-.collapse .navbar-nav a {
-  color: white;
-  margin: 0 20px;
-  padding: 10px;
+.card {
+    width: 500px;
+    height: 240px;
+}
+.card p {
+    color: #323232;
+    font-size: 16px;
+    font-weight: 400;
+}
+.navbar-brand {
+    color: #FF9900;
+    font-weight: bold;
 }
 
-.collapse .navbar-nav a:hover {
-  color: #ff9900;
-  transition: 0.4s;
+.nav-item {
+    margin-right: 30px;
 }
 
-.collapse .navbar-nav a.nav-link-active {
-  color: #ff9900;
-  text-decoration: none;
+.nav-item a {
+    color: #202020;
 }
 
-.collapse .navbar-nav input {
-  border-radius: 10px;
-  width: 160px;
-  height: 40px;
+.nav-item.beranda a {
+    color: #ffffff;
 }
 
-/* jumbotron */
-.jumbotron {
-  background-image: url("../images/jumbotron.png");
-  background-repeat: no-repeat;
-  background-color: #ff9900;
-  height: 700px;
-  display: flex;
-  justify-content: space-around;
-  padding: 0 100px;
+.navbar-nav .nav-item a.active {
+    color: #FF9900 !important;
+    font-weight: bold;
 }
 
-.jumbotron .main-1 {
-  margin-top: 210px;
+.search {
+    border-radius: 50px;
 }
 
-.jumbotron .main-1 h1 {
-  color: white;
-  font-size: 55px;
+.form-control::placeholder {
+    font-size: 14px;
+    font-weight: light;
+    color: #A3A3A3;
 }
 
-.jumbotron .main-1 p {
-  color: white;
-  margin-right: 10px
+.content {
+    min-height: 80vh;
 }
 
-.jumbotron .main-1 button {
-  font-size: smaller;
-  color: white;
-  background-color: #ff9900;
-  border-radius: 8px;
+footer {
+    background-color: #EE9322;
+    color: #FFF;
+    padding-top: 32px;
 }
 
-.jumbotron .main-1 button:hover {
-  background-color: #ffffff;
-  color: #ff9900;
-  transition: 0.4s;
+.copyright {
+    text-align: center;
+    height: 78px;
+    background-color: #E58A00;
+    color: #FFF;
+    padding: 20px 0;
 }
 
-.jumbotron .main-2 {
-  margin-top: 270px;
+.btn-kirim {
+    background-color: #FF9900;
+    color: #FFF;
+    border-radius: 4px;
+    height: 40px;
 }
 
-.jumbotron .main-2 img {
-  height: 190px;
-}
-
-.about h3 {
-  color: #ff9900;
-  text-align: center;
-  margin-top: 60px;
-}
-
-.about p {
-  padding: 0 180px;
-  text-align: center;
-}
-
-.about .container {
-  display: grid;
-  grid-template-columns: auto auto;
-  justify-items: center;
-  margin-top: 20px;
-  margin-bottom: 40px;
-  gap: 40px;
-}
-
-.about .container .card {
-  width: 350px;
-  height: 220px;
-  border-radius: 10px;
-  box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.2);
-}
-
-.about .container .card img {
-  height: 30px;
-  margin-top: -5px;
-  padding-right: 20px;
-}
-
-.about .container .card h5 {
-  margin: 30px 0 0 20px;
-}
-
-.about .container .card p {
-  padding: 20px 20px 0 20px;
-  font-size: 13px;
-  text-align: justify;
-}
-
-/* informasi */
-.informasi {
-  padding: 0 210px;
-  display: grid;
-  grid-template-areas: "infor-1 info-2 info-3";
-  grid-template-columns: 0.6fr 0.2fr 0.2fr;
-  background-color: #ff9900;
-}
-
-.informasi h6 {
-  color: white;
-  margin-top: 30px;
-}
-
-.informasi .info-1 p {
-  color: white;
-  font-size: 13px;
-}
-
-.informasi .info-2 p {
-  color: white;
-  font-size: 13px;
-}
-
-.informasi .info-2 .text-1 p{
-  border-bottom: 0.1px solid rgba(0, 0, 0, 0.2);
-  width: 130px;
-  padding-bottom: 5px;
-}
-
-.informasi .info-2 .text-2 p{
-  border-bottom: 0.1px solid rgba(0, 0, 0, 0.2);
-  width: 130px;
-  margin-top: -15px;
-  padding-bottom: 5px;
-}
-
-.informasi .info-2 .text-3 p{
-  margin-top: -15px;
-}
-
-.informasi .info-3 {
-  margin-left: 50px;
-}
-
-.informasi .info-3 i {
-  color: white;
-  background-color: #FDCA7E;
-  width: 25px;
-  height: 25px;
-  border-radius: 20px;
-  padding-top: 2px;
-  text-align: center;
-  font-size: 20px;
-}
-
-.informasi .info-3 i:hover{
-  background-color: #ffffff;
-  color: black;
-  transition: 0.3s;
-}
-
-footer{
-  background-color: #E58A00;
-  color: white;
-  margin-bottom: -16px;
-  text-align: center;
-  height: 50px;
-}
-
-footer h6{
-  padding-top: 10px;
-  font-size: 15px;
-}
-
-footer p {
-  font-size: 11px;
-  margin-top: -10px;
+.btn-kirim:hover {
+    background-color: rgb(240, 144, 0);
+    color: #FFF;
 }
