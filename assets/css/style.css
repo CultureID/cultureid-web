@@ -11,13 +11,13 @@ header {
 
 header h1 {
     font-family: 'Playfair Display', serif;
-    color: #F5F5F5;
+    color: #ffffff;
     font-weight: 600;
-    font-size: 46px;
+    font-size: 48px;
 }
 header p {
     font-size: 14px;
-    color: #DCDCDC;
+    color: #f8f8f8;
     font-weight: 500;
 }
 
