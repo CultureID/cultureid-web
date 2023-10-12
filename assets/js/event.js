@@ -20,7 +20,9 @@ let card = (event) => {
         <img src="assets/images/events/${event.thumbnail}" class="card-img-top object-fit-cover" alt="${event.name}" height="150px">
         <div class="card-body d-flex flex-column justify-content-between">
             <p class="card-text fw-lighter" style="color: var(--light-color); font-size: 11pt">${localDate}</p>
-            <h5 class="card-title fw-semibold flex-grow-1" style="font-size: 14pt">${event.name}</h5>
+            <h5 class="card-title fw-semibold flex-grow-1" style="font-size: 14pt">
+                    <a class="nav-link" href="${event.url}">${event.name}</a>
+            </h5>
             <p class="card-text fw-lighter flex-grow-1 align-content-start" style="color: var(--light-color); font-size: 11pt">${event.location}<br>${event.city}</p>
             <p class="card-text fw-bold fs-6">${event.is_free ? "GRATIS" : 'Rp.' + event.fee}</p>
         </div>

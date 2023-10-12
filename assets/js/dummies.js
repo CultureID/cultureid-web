@@ -6,7 +6,8 @@ const events = [
         is_free: true,
         fee: 0,
         date: "2023-10-13",
-        thumbnail: 'grebek-maulud.png'
+        thumbnail: 'grebek-maulud.png',
+        url: "#"
     },
     {
         name: "Kauman Batik Art Festival",
@@ -15,7 +16,8 @@ const events = [
         is_free: true,
         fee: 0,
         date: "2023-10-14",
-        thumbnail: 'kauman-batik-art-festival.png'
+        thumbnail: 'kauman-batik-art-festival.png',
+        url: "/detail-event.html"
     },
     {
         name: "Festival Kalipucang Wetan",
@@ -24,7 +26,8 @@ const events = [
         is_free: true,
         fee: 0,
         date: "2023-10-13",
-        thumbnail: 'festival-kalipucang-wetan.png'
+        thumbnail: 'festival-kalipucang-wetan.png',
+        url: "#"
     },
     {
         name: "Pameran Flona",
@@ -33,7 +36,8 @@ const events = [
         is_free: true,
         fee: 0,
         date: "2023-10-16",
-        thumbnail: 'pameran-flona.png'
+        thumbnail: 'pameran-flona.png',
+        url: "#"
     },
     {
         name: "Pameran Garis Ombak",
@@ -42,7 +46,8 @@ const events = [
         is_free: true,
         fee: 0,
         date: "2023-09-30",
-        thumbnail: 'pameran-garis-ombak.png'
+        thumbnail: 'pameran-garis-ombak.png',
+        url: "#"
     },
     {
         name: "Attack on Titan: The Final Exhibition",
@@ -51,7 +56,8 @@ const events = [
         is_free: true,
         fee: 0,
         date: "2023-09-22",
-        thumbnail: 'aot-the-final-exhibition.png'
+        thumbnail: 'aot-the-final-exhibition.png',
+        url: "#"
     },
     {
         name: "Pameran Wisma Geha",
@@ -60,7 +66,8 @@ const events = [
         is_free: true,
         fee: 0,
         date: "2023-09-21",
-        thumbnail: 'pameran-wisma-geha.png'
+        thumbnail: 'pameran-wisma-geha.png',
+        url: "#"
     },
     {
         name: "Festival Pesona Raja Ampat",
@@ -69,7 +76,8 @@ const events = [
         is_free: true,
         fee: 0,
         date: "2023-09-15",
-        thumbnail: 'festival-pesona-raja-ampat.png'
+        thumbnail: 'festival-pesona-raja-ampat.png',
+        url: "#"
     },
 ]
 
