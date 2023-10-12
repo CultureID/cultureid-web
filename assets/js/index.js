@@ -1,6 +1,6 @@
 window.addEventListener("scroll", function () {
   const navbar = document.querySelector(".navbar");
-  const navlinks = document.querySelectorAll(".nav-link");
+  const navlinks = document.querySelectorAll(".navbar-collapse > .navbar-nav > .nav-item > .nav-link");
   if (window.scrollY > 50) {
     navbar.classList.add("bg-white");
     navlinks.forEach((navlink) => {
