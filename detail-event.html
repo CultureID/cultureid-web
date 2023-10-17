@@ -36,7 +36,7 @@
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
-                    <input class="form-control search me-2" type="search" placeholder="Cari informasi..."
+                    <input class="form-control search" type="search" placeholder="Cari informasi..."
                         aria-label="Search">
                 </form>
             </div>
@@ -144,6 +144,17 @@
 
 
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', e => {
+
+            let params = new URLSearchParams(document.location.search);
+            let eventName = params.get("event");
+
+            const h1 = document.querySelector("h1")
+
+            h1.innerText = eventName;
+        })
+    </script>
 </body>
 
 </html>

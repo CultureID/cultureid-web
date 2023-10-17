@@ -6,7 +6,6 @@ header {
     background-image: url('../images/background.jpg');
     min-height: 100vh;
     padding: 250px 0 165px;
-    margin-top: -60px;
 }
 
 header h1 {

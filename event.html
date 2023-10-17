@@ -96,7 +96,7 @@
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
-                    <input class="form-control search me-2" type="search" placeholder="Cari informasi..."
+                    <input class="form-control search" type="search" placeholder="Cari informasi..."
                         aria-label="Search">
                 </form>
             </div>
@@ -129,10 +129,12 @@
             </div>
 
             <h5 style="color: var(--primary-color)" class="fw-bolder fs-2 mb-3">Event Mendatang</h5>
-            <div id="upcoming-events" class="d-flex mb-5"></div>
+            <div id="upcoming-events" class="d-flex flex-wrap mb-5"></div>
 
             <h5 style="color: var(--primary-color)" class="fw-bolder fs-2 mb-3">Telah Selesai</h5>
-            <div id="ended-events" class="d-flex mb-5"></div>
+            <div class="container">
+                <div id="ended-events" class="d-flex flex-wrap row"></div>
+            </div>
         </div>
     </section>
 
