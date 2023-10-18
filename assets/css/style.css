@@ -209,3 +209,73 @@ footer {
     color: #fff;
   }
 /* Halaman Detail Event */
+
+/* Isi konten tentang kami */
+.content1 {
+  margin: 40px 10%;
+  padding: 0px 20px;
+  font-family: Poppins;
+  line-height: 4vh;
+}
+
+
+.content1 h2 {
+  font-size: 50px;
+  color: #FF9900;
+  font-family: fairdisplay;
+  text-align: center;
+}
+
+.content1 h3 {
+  font-size: 14px;
+  color: #6C6C6C;
+  font-family: Poppins;
+  text-align: center;
+  line-height: 4vh;
+}
+
+.content2 {
+  font-size: 16px;
+  font-family: Poppins;
+  color: #6C6C6C;
+  display: flex;
+  margin: 0px 0px 50px;
+
+}
+
+.content3 {
+  margin: 0px 5px 50px;
+  padding: 10px;
+  text-align: justify;
+}
+
+.content3 p {
+  padding-right: 120px;
+}
+
+.content3a {
+  margin: 0px;
+  padding: 10px;
+  text-align: justify;
+}
+
+.content3a p {
+  padding-left: 14px;
+}
+
+/* Akhir tentang kami */
+
+/* Tim kami */
+.content4 h2 {
+  font-size: 50px;
+  font-family: fairdisplay;
+  text-align: center;
+  color: #FF9900;
+}
+
+.content4 p {
+  font-size: 14px;
+  font-family: Poppins;
+  text-align: center;
+  color: #6C6C6C;
+}
