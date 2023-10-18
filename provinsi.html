@@ -43,12 +43,24 @@
             font-weight: bold;
         }
 
+        aside {
+            position: sticky;
+            top: 80px;
+            height: calc(100vh - 10rem);
+            overflow-y: auto;
+        }
+
         #sidebar>.nav>li>a {
             font-weight: bold;
         }
 
         #sidebar .nav .nav>li>a {
             padding-left: 30px;
+        }
+
+        #sidebar .nav .nav>li.active {
+            background-color: #FF9900;
+            border-radius: 10px;
         }
 
         nav[data-toggle="toc"] {
@@ -116,8 +128,10 @@
     <div class="container p-4">
         <div class="row">
             <div class="col">
-                <nav id="sidebar" class="sticky-top">
-                </nav>
+                <aside>
+                    <nav id="sidebar"></nav>
+                    <hr style="color: #FF9900; height: 3px">
+                </aside>
             </div>
             <div class="col">
                 <article>

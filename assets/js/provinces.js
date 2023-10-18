@@ -1,17 +1,21 @@
-import {
-    islands,
-} from './dummies.js';
+import { islands } from "./dummies.js";
 
-let sidebar = document.getElementById('sidebar');
+document.addEventListener("DOMContentLoaded", (e) => {
+  let sidebar = document.getElementById("sidebar");
 
-let generateIslandHTML = (item) => {
-    let provinceHTML = item.provinces.map((province) => {
+  let params = new URLSearchParams(document.location.search);
+  let provinceActive = params.get("provinsi");
+
+  let generateIslandHTML = (item) => {
+    let provinceHTML = item.provinces
+      .map((province) => {
         return `
-            <li>
+            <li ${provinceActive == province.slug ? 'class="active"' : ""}">
                 <a class="nav-link" href="${province.slug}">${province.name}</a>
             </li>
         `;
-    }).join('');
+      })
+      .join("");
 
     let islandHTML = `
         <li>
@@ -23,12 +27,13 @@ let generateIslandHTML = (item) => {
     `;
 
     return islandHTML;
-}
+  };
 
-islands.forEach((item) => {
-    let islandElement = document.createElement('ul');
+  islands.forEach((item) => {
+    let islandElement = document.createElement("ul");
     islandElement.className = "nav navbar-nav";
     islandElement.innerHTML = generateIslandHTML(item);
 
     sidebar.appendChild(islandElement);
+  });
 });
