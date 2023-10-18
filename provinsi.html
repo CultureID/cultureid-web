@@ -1,467 +1,371 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css"
-    />
-    <script
-      src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
-      integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
-      crossorigin="anonymous"
-    ></script>
 
-    <script type="module" src="assets/js/provinces.js"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css" />
+  <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+    integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
 
-    <style>
-      article > * {
-        text-align: justify;
-      }
+  <script type="module" src="assets/js/provinces.js"></script>
 
-      table > * {
-        text-align: center;
-      }
+  <style>
+    article>* {
+      text-align: justify;
+    }
 
-      table,
-      th,
-      td {
-        border: 1px solid #e9e9e9;
-        border-collapse: collapse;
-      }
+    table>* {
+      text-align: center;
+    }
 
-      h1,
-      h2 {
-        color: #ff9900;
-        font-weight: bold;
-      }
+    table,
+    th,
+    td {
+      border: 1px solid #e9e9e9;
+      border-collapse: collapse;
+    }
 
-      h3 {
-        display: list-item;
-        margin-left: 2em;
-        font-weight: bold;
-      }
+    h1,
+    h2 {
+      color: #ff9900;
+      font-weight: bold;
+    }
 
-      aside {
-        position: sticky;
-        top: 80px;
-        height: calc(100vh - 10rem);
-        overflow-y: auto;
-      }
+    h3 {
+      display: list-item;
+      margin-left: 2em;
+      font-weight: bold;
+    }
 
-      #sidebar > .nav > li > a {
-        font-weight: bold;
-      }
+    aside {
+      position: sticky;
+      top: 80px;
+      height: calc(100vh - 10rem);
+      overflow-y: auto;
+    }
 
-      #sidebar .nav .nav > li > a {
-        padding-left: 30px;
-      }
+    #sidebar>.nav>li>a {
+      font-weight: bold;
+    }
 
-      #sidebar .nav .nav > li.active {
-        background-color: #ff9900;
-        border-radius: 10px;
-      }
+    #sidebar .nav .nav>li>a {
+      padding-left: 30px;
+    }
 
+    #sidebar .nav .nav>li.active {
+      background-color: #ff9900;
+      border-radius: 10px;
+    }
+
+    nav[data-toggle="toc"] {
+      top: 80px;
+    }
+
+    nav[data-toggle="toc"] .nav .nav {
+      display: block;
+    }
+
+    nav[data-toggle="toc"] .nav-link.active,
+    nav[data-toggle="toc"] .nav-link.active:hover,
+    nav[data-toggle="toc"] .nav>li>a:hover {
+      border-left-color: #ff9900;
+      color: #ff9900;
+    }
+
+    /* small screens */
+    @media (max-width: 768px) {
       nav[data-toggle="toc"] {
-        top: 80px;
+        margin-bottom: 42px;
+        position: static;
       }
+    }
+  </style>
 
-      nav[data-toggle="toc"] .nav .nav {
-        display: block;
-      }
+  <title>CultureID</title>
+</head>
 
-      nav[data-toggle="toc"] .nav-link.active,
-      nav[data-toggle="toc"] .nav-link.active:hover,
-      nav[data-toggle="toc"] .nav > li > a:hover {
-        border-left-color: #ff9900;
-        color: #ff9900;
-      }
+<body data-bs-spy="scroll" data-bs-target="#toc">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">CultureID</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Beranda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="event.html">Event</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="provinsi.html">Provinsi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tentang.html">Tentang</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control search" type="search" placeholder="Cari informasi..." aria-label="Search" />
+        </form>
+      </div>
+  </nav>
+  <!-- Navbar -->
 
-      /* small screens */
-      @media (max-width: 768px) {
-        nav[data-toggle="toc"] {
-          margin-bottom: 42px;
-          position: static;
-        }
-      }
-    </style>
+  <div class="container p-4">
+    <div class="row">
+      <div class="col">
+        <aside>
+          <nav id="sidebar"></nav>
+          <hr style="color: #ff9900; height: 3px" />
+        </aside>
+      </div>
+      <div class="col">
+        <article>
+          <h1>Kepulauan Riau</h1>
 
-    <title>CultureID</title>
-  </head>
+          <p>
+            Kepulauan Riau (disingkat Kepri) adalah sebuah wilayah provinsi
+            yang terletak di Indonesia. Ibu kota Provinsi Kepulauan Riau ini
+            adalah Kota Tanjungpinang. Provinsi ini berbatasan langsung dengan
+            Vietnam dan Kamboja di sebelah Utara; Malaysia dan provinsi
+            Kalimantan Barat di sebelah Timur; provinsi Kepulauan Bangka
+            Belitung dan Jambi di Selatan; negara Singapura, Malaysia dan
+            provinsi Riau di sebelah Barat. Provinsi ini termasuk provinsi
+            kepulauan di Indonesia. Tahun 2020, penduduk Kepulauan Riau
+            berjumlah 2.064.564 jiwa, dengan kepadatan 252 jiwa/km2, dan 58%
+            penduduknya berada di kota Batam.
+          </p>
 
-  <body data-bs-spy="scroll" data-bs-target="#toc">
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
-<<<<<<< HEAD
-      <div class="container">
-        <a class="navbar-brand" href="#">CultureID</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
+          <h2>Informasi Umum</h2>
+          <hr />
+          <table border="">
+            <tr>
+              <th>Nama</th>
+              <th>Kode Wilayah Indonesia</th>
+              <th>Kode Internasional</th>
+              <th>Singkatan Umum</th>
+              <th>Ibu Kota</th>
+              <th>Hari Jadi</th>
+              <th>Lambang</th>
+            </tr>
+            <tr>
+              <td>Kepulauan Riau</td>
+              <td>21</td>
+              <td>ID-KR</td>
+              <td>Kepri</td>
+              <td>Tanjung Pinang</td>
+              <td>24 September 2002</td>
+              <td>
+                <img src="assets/images/kepri/logo.png" alt="Logo Kepri" width="50" />
+              </td>
+            </tr>
+          </table>
+
+          <h2>Budaya</h2>
+          <hr />
+
+          <h3>Rumah Adat</h3>
+          <img src="assets/images/kepri/rumah.png" alt="Rumah Belah Bubung" width="100%" />
+
+          <p>
+            Rumah Belah Bubung adalah rumah adat dari kepulauan Riau yang
+            berada di Indonesia. Rumah Belah Bubung juga dikenal dengan nama
+            rumah rabung atau rumah bubung melayu. Rumah Belah Bubung memiliki
+            model rumah yang sama dengan rumah panggung. Rumah ini memiliki
+            tinggi 2 meter dari tanah dan ditopang oleh beberapa tiang
+            penyangga. Rumah ini memiliki atap yang berbentuk seperti pelana
+            kuda. Rumah induk terbagi menjadi 4 bagian yaitu selasar, ruang
+            induk, ruang penghubung dapur, dan dapur. Proses pembangunan rumah
+            pun tidak sembarangan karena harus melalui beberapa tahap yang
+            dipercaya menghindari pemilik rumah dari kesialan. Semakin besar
+            ukuran rumah ini memperlihatkan bahwa kemampuan ekonomi dari
+            pemilik rumah adalah menengah ke atas, tetapi semakin kecil rumah
+            ini menunjukkan bahwa ekonomi pemilik rumah menengah ke bawah.
+          </p>
+
+          <h3>Tarian Tradisional</h3>
+
+          <p>
+            Aceh memiliki banyak tarian dari 9 etnis yang ada. Beberapa tarian
+            yang terkenal di tingkat nasional dan bahkan dunia merupakan
+            tarian yang berasal dari Aceh, seperti Tari Saman dan Tari
+            Seudati.
+          </p>
+          <img src="assets/images/kepri/tari.png" alt="Tari Seudati" width="100%" />
+
+          <p>
+            Tari Zapin merupakan tarian yang berasal dari negeri Yaman yang
+            populer dalam kalangan masyarakat Melayu di Indonesia, terutama di
+            wilayah yang bermayoritas Melayu seperti di Kepulauan Riau. Zapin
+            diyakini masuk ke wilayah Nusantara dipengaruhi oleh orang-orang
+            Persia dan Arab yang berakulturasi dengan kebudayaan Melayu lokal
+            dalam menyebarkan ajaran Islam dari Timur Tengah pada sekitar abad
+            keempat belas. Dahulu, tarian ini hanya dilakukan untuk upacara
+            keagamaan tetapi selama bertahun-tahun tarian itu telah berkembang
+            menjadi suatu bentuk hiburan tradisional bagi masyarakat Melayu.
+          </p>
+
+          <h3>Bahasa Daerah</h3>
+
+          <p>
+            Bahasa daerah yang ada Provinsi Kepulauan Riau adalah bahasa
+            Melayu Riau yang digunakan masyarakat seluruh Provinsi Riau dalam
+            kehidupan sehari-hari, yang sudah menjadi ciri khas masyarakat
+            Kepulauan Riau. Bahasa melayu Riau ini digadang sebagai cikal
+            bakal bahasa Indonesia, sehingga terkadang terdengar sangat mirip
+            dengan bahasa Indonesia baku. Pemilihan bahasa melayu Riau sebagai
+            akar bahasa Indonesia sesuai dengan kebijakan pemerintah Kolonial
+            Belanda
+          </p>
+
+          <h3>Tradisi Adat</h3>
+          <img src="assets/images/kepri/tari2.png" alt="Tari makan sirih" width="100%" />
+          <p>
+            Tari makan sirih (Persembahan) adalah salah satu tarian
+            tradisional atau tarian klasik riau (melayu) yang umumnya
+            dipentaskan untuk menyambut dan dipersembahkan untuk menghormati
+            tamu negara / tamu agung yang datang. Saat pertunjukan, salah satu
+            penari dalam tari persembahan akan membawa kotak yang berisi
+            sirih. Sirih dalam kotak tersebut kemudian dibuka dan tamu yang
+            dianggap agung diberi kesempatan pertama untuk mengambilnya
+            sebagai bentuk penghormatan, kemudian diikuti oleh tamu yang lain.
+            Karenanya, banyak orang yang menyebut tari persembahan Riau dengan
+            sebutan tari sekapur sirih.
+          </p>
+
+          <h3>Senjata Tradisional</h3>
+          <img src="assets/images/kepri/senjata.png" alt="Badik Tumbuk Lada" width="100%" />
+
+          <p>
+            Badik tumbuk lada merupakan senjata khas Kepulauan Riau. Bentuknya
+            seperti keris namun lebih pendek. Badik tumbuk lada terbuat dari
+            besi dan baja dan memiliki sarung penutup yang terbuat dari kayu
+            dengan lapisan emas atau perak.
+          </p>
+
+          <h3>Lagu Daerah</h3>
+
+          <p>
+            Kepulauan Riau kaya akan beragam kebudayaan yang terjaga hingga
+            kini. Salah satunya, yakni lagu daerah. Salah satu lagu daerah
+            Kepulauan Riau yaitu Segantang Lada. Lagu daerah ini sendiri
+            mengisahkan seorang gadis yang merindukan kekasihnya. Sebenarnya,
+            lagu ini menggambarkan kecintaan terhadap tanah Riau. Karena,
+            Segantang Lada adalah julukan bagi daerah Provinsi Riau.
+          </p>
+
+          <h3>Alat Musik Daerah</h3>
+          <img src="assets/images/kepri/musik.png" alt="Gendang Panjang" width="100%" />
+
+          <p>
+            Alat musik asal Kepulauan Riau adalah gendang panjang yang
+            termasuk dalam jenis alat musik membranofon. Alat musik
+            tradisional ini sering digunakan untuk mengiringi lagu daerah
+            bersamaan dengan alat musik lainnya atau dimainkan dalam upacara
+            tertentu, seperti pernikahan, penyambutan tamu penting dan lain
+            sebagainya. Menurut Ketut Wisnawa dalam buku Seni Musik Tradisi
+            Nusantara (2020), gendang panjang dimainkan dengan cara ditepuk
+            pada bagian membrannya menggunakan telapak tangan. Cara menepuknya
+            harus tepat agar bisa menghasilkan suara yang pas.
+          </p>
+
+          <h2>Kuliner</h2>
+          <hr />
+          <img src="assets/images/kepri/kuliner.png" alt="Ikan Selais" width="100%" />
+
+          <p>
+            Ikan selais merupakan makanan khas Kepulauan Riau yang mana ikan
+            ini diasap dalam waktu yang cukup lama hingga ikan kering.
+            Penyajiannya, ikan selais asap dimasak kembali menggunakan
+            rempah-rempah khas Kepulauan Riau dan dihidangkan bersama petai
+            yang membuat selera makan menjadi nikmat.
+          </p>
+
+          <h2>Destinasi Wisata</h2>
+          <hr />
+          <img src="assets/images/kepri/wisata.png" alt="Natuna" width="100%" />
+
+          <p>
+            Provinsi Kepulauan Riau merupakan gerbang wisata dari mancanegara
+            kedua setelah Pulau Bali. Jumlah wisatawan asing yang datang
+            berkunjung mencapai 1,5 juta orang pada tahun 2005. Objek wisata
+            di provinsi Kepulauan Riau antara lain adalah wisata pantai yang
+            terletak di kota Batam. Selain itu, terdapat Kabupaten Natuna yang
+            terkenal dengan wisata baharinya seperti selam permukaan.
+          </p>
+        </article>
+      </div>
+      <div class="col">
+        <nav id="toc" data-toggle="toc" class="sticky-top"></nav>
+      </div>
+    </div>
+  </div>
+  <!-- Navbar ToC -->
+  <!-- Navbar ToC -->
+
+  <!-- Footer -->
+  <footer>
+    <div class="container pb-2">
+      <div class="row justify-content-center">
+        <div class="col-md-5">
+          <h5 class="fw-semibold">CultureID</h5>
+          <p class="mb-0">
+            Jalan Pangeran Antasari, Ciapa Hayo, Kota Jakarta Selatan Daerah
+            Khusus Ibukota Jakarta 66666
+          </p>
+          <p class="mb-0">
+            <span class="fw-bold">Phone:</span> (62) 3132 2323 2332
+          </p>
+          <p><span class="fw-bold">Email:</span> cultureid@gmail.com</p>
+        </div>
+        <div class="col-md-3">
+          <h5 class="fw-semibold">Link Terkait</h5>
+          <ul class="navbar-nav">
+            <li class="border-bottom">
               <a class="nav-link" href="index.html">Beranda</a>
             </li>
-            <li class="nav-item">
+            <li class="border-bottom">
               <a class="nav-link" href="event.html">Event</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="provinsi.html">Provinsi</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Tentang.html">Kontak</a>
+            <li>
+              <a class="nav-link" href="provinsi.html">Provinsi</a>
             </li>
           </ul>
-          <form class="d-flex" role="search">
-            <input
-              class="form-control search"
-              type="search"
-              placeholder="Cari informasi..."
-              aria-label="Search"
-            />
-          </form>
-=======
-        <div class="container">
-            <a class="navbar-brand" href="#">CultureID</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Beranda</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="event.html">Event</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="provinsi.html">Provinsi</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Tentang.html">Tentang</a>
-                    </li>
-                </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control search" type="search" placeholder="Cari informasi..."
-                        aria-label="Search">
-                </form>
-            </div>
->>>>>>> a438e4cf2278ebb2e8182d7881fceeec4aab9cfe
         </div>
-      </div>
-    </nav>
-    <!-- Navbar -->
-
-    <div class="container p-4">
-      <div class="row">
-        <div class="col">
-          <aside>
-            <nav id="sidebar"></nav>
-            <hr style="color: #ff9900; height: 3px" />
-          </aside>
-        </div>
-        <div class="col">
-          <article>
-            <h1>Kepulauan Riau</h1>
-
-            <p>
-              Kepulauan Riau (disingkat Kepri) adalah sebuah wilayah provinsi
-              yang terletak di Indonesia. Ibu kota Provinsi Kepulauan Riau ini
-              adalah Kota Tanjungpinang. Provinsi ini berbatasan langsung dengan
-              Vietnam dan Kamboja di sebelah Utara; Malaysia dan provinsi
-              Kalimantan Barat di sebelah Timur; provinsi Kepulauan Bangka
-              Belitung dan Jambi di Selatan; negara Singapura, Malaysia dan
-              provinsi Riau di sebelah Barat. Provinsi ini termasuk provinsi
-              kepulauan di Indonesia. Tahun 2020, penduduk Kepulauan Riau
-              berjumlah 2.064.564 jiwa, dengan kepadatan 252 jiwa/km2, dan 58%
-              penduduknya berada di kota Batam.
-            </p>
-
-            <h2>Informasi Umum</h2>
-            <hr />
-            <table border="">
-              <tr>
-                <th>Nama</th>
-                <th>Kode Wilayah Indonesia</th>
-                <th>Kode Internasional</th>
-                <th>Singkatan Umum</th>
-                <th>Ibu Kota</th>
-                <th>Hari Jadi</th>
-                <th>Lambang</th>
-              </tr>
-              <tr>
-                <td>Kepulauan Riau</td>
-                <td>21</td>
-                <td>ID-KR</td>
-                <td>Kepri</td>
-                <td>Tanjung Pinang</td>
-                <td>24 September 2002</td>
-                <td>
-                  <img
-                    src="assets/images/kepri/logo.png"
-                    alt="Logo Kepri"
-                    width="50"
-                  />
-                </td>
-              </tr>
-            </table>
-
-            <h2>Budaya</h2>
-            <hr />
-
-            <h3>Rumah Adat</h3>
-            <img
-              src="assets/images/kepri/rumah.png"
-              alt="Rumah Belah Bubung"
-              width="100%"
-            />
-
-            <p>
-              Rumah Belah Bubung adalah rumah adat dari kepulauan Riau yang
-              berada di Indonesia. Rumah Belah Bubung juga dikenal dengan nama
-              rumah rabung atau rumah bubung melayu. Rumah Belah Bubung memiliki
-              model rumah yang sama dengan rumah panggung. Rumah ini memiliki
-              tinggi 2 meter dari tanah dan ditopang oleh beberapa tiang
-              penyangga. Rumah ini memiliki atap yang berbentuk seperti pelana
-              kuda. Rumah induk terbagi menjadi 4 bagian yaitu selasar, ruang
-              induk, ruang penghubung dapur, dan dapur. Proses pembangunan rumah
-              pun tidak sembarangan karena harus melalui beberapa tahap yang
-              dipercaya menghindari pemilik rumah dari kesialan. Semakin besar
-              ukuran rumah ini memperlihatkan bahwa kemampuan ekonomi dari
-              pemilik rumah adalah menengah ke atas, tetapi semakin kecil rumah
-              ini menunjukkan bahwa ekonomi pemilik rumah menengah ke bawah.
-            </p>
-
-            <h3>Tarian Tradisional</h3>
-
-            <p>
-              Aceh memiliki banyak tarian dari 9 etnis yang ada. Beberapa tarian
-              yang terkenal di tingkat nasional dan bahkan dunia merupakan
-              tarian yang berasal dari Aceh, seperti Tari Saman dan Tari
-              Seudati.
-            </p>
-            <img
-              src="assets/images/kepri/tari.png"
-              alt="Tari Seudati"
-              width="100%"
-            />
-
-            <p>
-              Tari Zapin merupakan tarian yang berasal dari negeri Yaman yang
-              populer dalam kalangan masyarakat Melayu di Indonesia, terutama di
-              wilayah yang bermayoritas Melayu seperti di Kepulauan Riau. Zapin
-              diyakini masuk ke wilayah Nusantara dipengaruhi oleh orang-orang
-              Persia dan Arab yang berakulturasi dengan kebudayaan Melayu lokal
-              dalam menyebarkan ajaran Islam dari Timur Tengah pada sekitar abad
-              keempat belas. Dahulu, tarian ini hanya dilakukan untuk upacara
-              keagamaan tetapi selama bertahun-tahun tarian itu telah berkembang
-              menjadi suatu bentuk hiburan tradisional bagi masyarakat Melayu.
-            </p>
-
-            <h3>Bahasa Daerah</h3>
-
-            <p>
-              Bahasa daerah yang ada Provinsi Kepulauan Riau adalah bahasa
-              Melayu Riau yang digunakan masyarakat seluruh Provinsi Riau dalam
-              kehidupan sehari-hari, yang sudah menjadi ciri khas masyarakat
-              Kepulauan Riau. Bahasa melayu Riau ini digadang sebagai cikal
-              bakal bahasa Indonesia, sehingga terkadang terdengar sangat mirip
-              dengan bahasa Indonesia baku. Pemilihan bahasa melayu Riau sebagai
-              akar bahasa Indonesia sesuai dengan kebijakan pemerintah Kolonial
-              Belanda
-            </p>
-
-            <h3>Tradisi Adat</h3>
-            <img
-              src="assets/images/kepri/tari2.png"
-              alt="Tari makan sirih"
-              width="100%"
-            />
-            <p>
-              Tari makan sirih (Persembahan) adalah salah satu tarian
-              tradisional atau tarian klasik riau (melayu) yang umumnya
-              dipentaskan untuk menyambut dan dipersembahkan untuk menghormati
-              tamu negara / tamu agung yang datang. Saat pertunjukan, salah satu
-              penari dalam tari persembahan akan membawa kotak yang berisi
-              sirih. Sirih dalam kotak tersebut kemudian dibuka dan tamu yang
-              dianggap agung diberi kesempatan pertama untuk mengambilnya
-              sebagai bentuk penghormatan, kemudian diikuti oleh tamu yang lain.
-              Karenanya, banyak orang yang menyebut tari persembahan Riau dengan
-              sebutan tari sekapur sirih.
-            </p>
-
-            <h3>Senjata Tradisional</h3>
-            <img
-              src="assets/images/kepri/senjata.png"
-              alt="Badik Tumbuk Lada"
-              width="100%"
-            />
-
-            <p>
-              Badik tumbuk lada merupakan senjata khas Kepulauan Riau. Bentuknya
-              seperti keris namun lebih pendek. Badik tumbuk lada terbuat dari
-              besi dan baja dan memiliki sarung penutup yang terbuat dari kayu
-              dengan lapisan emas atau perak.
-            </p>
-
-            <h3>Lagu Daerah</h3>
-
-            <p>
-              Kepulauan Riau kaya akan beragam kebudayaan yang terjaga hingga
-              kini. Salah satunya, yakni lagu daerah. Salah satu lagu daerah
-              Kepulauan Riau yaitu Segantang Lada. Lagu daerah ini sendiri
-              mengisahkan seorang gadis yang merindukan kekasihnya. Sebenarnya,
-              lagu ini menggambarkan kecintaan terhadap tanah Riau. Karena,
-              Segantang Lada adalah julukan bagi daerah Provinsi Riau.
-            </p>
-
-            <h3>Alat Musik Daerah</h3>
-            <img
-              src="assets/images/kepri/musik.png"
-              alt="Gendang Panjang"
-              width="100%"
-            />
-
-            <p>
-              Alat musik asal Kepulauan Riau adalah gendang panjang yang
-              termasuk dalam jenis alat musik membranofon. Alat musik
-              tradisional ini sering digunakan untuk mengiringi lagu daerah
-              bersamaan dengan alat musik lainnya atau dimainkan dalam upacara
-              tertentu, seperti pernikahan, penyambutan tamu penting dan lain
-              sebagainya. Menurut Ketut Wisnawa dalam buku Seni Musik Tradisi
-              Nusantara (2020), gendang panjang dimainkan dengan cara ditepuk
-              pada bagian membrannya menggunakan telapak tangan. Cara menepuknya
-              harus tepat agar bisa menghasilkan suara yang pas.
-            </p>
-
-            <h2>Kuliner</h2>
-            <hr />
-            <img
-              src="assets/images/kepri/kuliner.png"
-              alt="Ikan Selais"
-              width="100%"
-            />
-
-            <p>
-              Ikan selais merupakan makanan khas Kepulauan Riau yang mana ikan
-              ini diasap dalam waktu yang cukup lama hingga ikan kering.
-              Penyajiannya, ikan selais asap dimasak kembali menggunakan
-              rempah-rempah khas Kepulauan Riau dan dihidangkan bersama petai
-              yang membuat selera makan menjadi nikmat.
-            </p>
-
-            <h2>Destinasi Wisata</h2>
-            <hr />
-            <img
-              src="assets/images/kepri/wisata.png"
-              alt="Natuna"
-              width="100%"
-            />
-
-            <p>
-              Provinsi Kepulauan Riau merupakan gerbang wisata dari mancanegara
-              kedua setelah Pulau Bali. Jumlah wisatawan asing yang datang
-              berkunjung mencapai 1,5 juta orang pada tahun 2005. Objek wisata
-              di provinsi Kepulauan Riau antara lain adalah wisata pantai yang
-              terletak di kota Batam. Selain itu, terdapat Kabupaten Natuna yang
-              terkenal dengan wisata baharinya seperti selam permukaan.
-            </p>
-          </article>
-        </div>
-        <div class="col">
-          <nav id="toc" data-toggle="toc" class="sticky-top"></nav>
+        <div class="col-md-3">
+          <h5 class="fw-semibold">Sosial Media</h5>
+          <a href="https://instagram.com/instagram" target="_blank" class="mx-1"><img
+              src="assets/images/ic_instagram.svg" alt="" /></a>
+          <a href="https://www.tiktok.com/@tiktok?lang=id-ID" target="_blank" class="mx-1"><img
+              src="assets/images/ic_tiktok.svg" alt="" /></a>
+          <a href="https://www.youtube.com/@YouTube" target="_blank" class="mx-1"><img
+              src="assets/images/ic_youtube.svg" alt="" /></a>
         </div>
       </div>
     </div>
-    <!-- Navbar ToC -->
-    <!-- Navbar ToC -->
+    <div class="copyright">
+      <p class="mb-0">
+        <strong>&copy; CultureID.</strong> All Right Reserverd
+      </p>
+      <p class="mb-0" style="font-size: 12px">
+        Developed by Group 11 Afternoon C
+      </p>
+    </div>
+  </footer>
+  <!-- Footer -->
 
-    <!-- Footer -->
-    <footer>
-      <div class="container pb-2">
-        <div class="row justify-content-center">
-          <div class="col-md-5">
-            <h5 class="fw-semibold">CultureID</h5>
-            <p class="mb-0">
-              Jalan Pangeran Antasari, Ciapa Hayo, Kota Jakarta Selatan Daerah
-              Khusus Ibukota Jakarta 66666
-            </p>
-            <p class="mb-0">
-              <span class="fw-bold">Phone:</span> (62) 3132 2323 2332
-            </p>
-            <p><span class="fw-bold">Email:</span> cultureid@gmail.com</p>
-          </div>
-          <div class="col-md-3">
-            <h5 class="fw-semibold">Link Terkait</h5>
-            <ul class="navbar-nav">
-              <li class="border-bottom">
-                <a class="nav-link" href="index.html">Beranda</a>
-              </li>
-              <li class="border-bottom">
-                <a class="nav-link" href="event.html">Event</a>
-              </li>
-              <li>
-                <a class="nav-link" href="provinsi.html">Provinsi</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-3">
-            <h5 class="fw-semibold">Sosial Media</h5>
-            <a
-              href="https://instagram.com/instagram"
-              target="_blank"
-              class="mx-1"
-              ><img src="assets/images/ic_instagram.svg" alt=""
-            /></a>
-            <a
-              href="https://www.tiktok.com/@tiktok?lang=id-ID"
-              target="_blank"
-              class="mx-1"
-              ><img src="assets/images/ic_tiktok.svg" alt=""
-            /></a>
-            <a
-              href="https://www.youtube.com/@YouTube"
-              target="_blank"
-              class="mx-1"
-              ><img src="assets/images/ic_youtube.svg" alt=""
-            /></a>
-          </div>
-        </div>
-      </div>
-      <div class="copyright">
-        <p class="mb-0">
-          <strong>&copy; CultureID.</strong> All Right Reserverd
-        </p>
-        <p class="mb-0" style="font-size: 12px">
-          Developed by Group 11 Afternoon C
-        </p>
-      </div>
-    </footer>
-    <!-- Footer -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+</body>
 
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
-  </body>
 </html>

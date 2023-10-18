@@ -1,439 +1,374 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css"
-    />
-    <script
-      src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
-      integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
-      crossorigin="anonymous"
-    ></script>
 
-    <script type="module" src="assets/js/provinces.js"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.css" />
+  <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+    integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
 
-    <style>
-      article > * {
-        text-align: justify;
-      }
+  <script type="module" src="assets/js/provinces.js"></script>
 
-      table > * {
-        text-align: center;
-      }
+  <style>
+    article>* {
+      text-align: justify;
+    }
 
-      table,
-      th,
-      td {
-        border: 1px solid #e9e9e9;
-        border-collapse: collapse;
-      }
+    table>* {
+      text-align: center;
+    }
 
-      h1,
-      h2 {
-        color: #ff9900;
-        font-weight: bold;
-      }
+    table,
+    th,
+    td {
+      border: 1px solid #e9e9e9;
+      border-collapse: collapse;
+    }
 
-      h3 {
-        display: list-item;
-        margin-left: 2em;
-        font-weight: bold;
-      }
+    h1,
+    h2 {
+      color: #ff9900;
+      font-weight: bold;
+    }
 
-      aside {
-        position: sticky;
-        top: 80px;
-        height: calc(100vh - 10rem);
-        overflow-y: auto;
-      }
+    h3 {
+      display: list-item;
+      margin-left: 2em;
+      font-weight: bold;
+    }
 
-      #sidebar > .nav > li > a {
-        font-weight: bold;
-      }
+    aside {
+      position: sticky;
+      top: 80px;
+      height: calc(100vh - 10rem);
+      overflow-y: auto;
+    }
 
-      #sidebar .nav .nav > li > a {
-        padding-left: 30px;
-      }
+    #sidebar>.nav>li>a {
+      font-weight: bold;
+    }
 
-      #sidebar .nav .nav > li.active {
-        background-color: #ff9900;
-        border-radius: 10px;
-      }
+    #sidebar .nav .nav>li>a {
+      padding-left: 30px;
+    }
 
+    #sidebar .nav .nav>li.active {
+      background-color: #ff9900;
+      border-radius: 10px;
+    }
+
+    nav[data-toggle="toc"] {
+      top: 80px;
+    }
+
+    nav[data-toggle="toc"] .nav .nav {
+      display: block;
+    }
+
+    nav[data-toggle="toc"] .nav-link.active,
+    nav[data-toggle="toc"] .nav-link.active:hover,
+    nav[data-toggle="toc"] .nav>li>a:hover {
+      border-left-color: #ff9900;
+      color: #ff9900;
+    }
+
+    /* small screens */
+    @media (max-width: 768px) {
       nav[data-toggle="toc"] {
-        top: 80px;
+        margin-bottom: 42px;
+        position: static;
       }
+    }
+  </style>
 
-      nav[data-toggle="toc"] .nav .nav {
-        display: block;
-      }
+  <title>CultureID</title>
+</head>
 
-      nav[data-toggle="toc"] .nav-link.active,
-      nav[data-toggle="toc"] .nav-link.active:hover,
-      nav[data-toggle="toc"] .nav > li > a:hover {
-        border-left-color: #ff9900;
-        color: #ff9900;
-      }
+<body data-bs-spy="scroll" data-bs-target="#toc">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">CultureID</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Beranda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="event.html">Event</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="provinsi.html">Provinsi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tentang.html">Tentang</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control search" type="search" placeholder="Cari informasi..." aria-label="Search" />
+        </form>
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar -->
 
-      /* small screens */
-      @media (max-width: 768px) {
-        nav[data-toggle="toc"] {
-          margin-bottom: 42px;
-          position: static;
-        }
-      }
-    </style>
+  <div class="container p-4">
+    <div class="row">
+      <div class="col">
+        <aside>
+          <nav id="sidebar"></nav>
+          <hr style="color: #ff9900; height: 3px" />
+        </aside>
+      </div>
+      <div class="col">
+        <article>
+          <h1>Aceh</h1>
 
-    <title>CultureID</title>
-  </head>
+          <p>
+            Aceh adalah sebuah provinsi di Indonesia yang ibu kotanya berada
+            di Banda Aceh. Aceh merupakan salah satu provinsi di Indonesia
+            yang diberi status sebagai daerah istimewa dan juga diberi
+            kewenangan otonomi khusus. Aceh terletak di ujung utara pulau
+            Sumatra dan merupakan provinsi paling barat di Indonesia. Menurut
+            hasil sensus Badan Pusat Statistik tahun 2021, jumlah penduduk
+            provinsi ini sekitar 5.333.733 jiwa. Letaknya dekat dengan
+            Kepulauan Andaman dan Nikobar di India dan terpisahkan oleh Laut
+            Andaman. Aceh berbatasan dengan Teluk Benggala dan Laut Andaman di
+            sebelah utara, Samudra Hindia di sebelah barat, Selat Malaka di
+            sebelah timur, dan Sumatra Utara di sebelah tenggara dan selatan.
+          </p>
 
-  <body data-bs-spy="scroll" data-bs-target="#toc">
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
-      <div class="container">
-        <a class="navbar-brand" href="#">CultureID</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
+          <h2>Informasi Umum</h2>
+          <hr />
+          <table border="">
+            <tr>
+              <th>Nama</th>
+              <th>Kode Wilayah Indonesia</th>
+              <th>Kode Internasional</th>
+              <th>Singkatan Umum</th>
+              <th>Ibu Kota</th>
+              <th>Hari Jadi</th>
+              <th>Lambang</th>
+            </tr>
+            <tr>
+              <td>Aceh</td>
+              <td>11</td>
+              <td>ID-AC</td>
+              <td>-</td>
+              <td>Banda Aceh</td>
+              <td>-</td>
+              <td>
+                <img src="assets/images/aceh/logo.png" alt="Logo Kepri" width="50" />
+              </td>
+            </tr>
+          </table>
+
+          <h2>Budaya</h2>
+          <hr />
+
+          <h3>Rumah Adat</h3>
+          <img src="assets/images/aceh/rumah.png" alt="Rumah Belah Bubung" width="100%" />
+
+          <p>
+            Rumah tradisional Aceh dinamakan Rumoh Aceh. Rumah ini bertipe
+            rumah panggung dengan 3 bagian utama dan 1 bagian tambahan. Tiga
+            bagian utama dari rumah Aceh yaitu seuramoë keuë (serambi depan),
+            seuramoë teungoh (serambi tengah) dan seuramoë likôt (serambi
+            belakang). Sedangkan 1 bagian tambahannya yaitu rumoh dapu (rumah
+            dapur).
+          </p>
+
+          <h3>Tarian Tradisional</h3>
+
+          <p>
+            Aceh memiliki banyak tarian dari 9 etnis yang ada. Beberapa tarian
+            yang terkenal di tingkat nasional dan bahkan dunia merupakan
+            tarian yang berasal dari Aceh, seperti Tari Saman dan Tari
+            Seudati.
+          </p>
+
+          <img src="assets/images/aceh/tari.png" alt="Tari Seudati" width="100%" />
+
+          <p>
+            Tari Saman merupakan salah satu media untuk menyampaikan pesan
+            atau dakwah. Tarian ini mencerminkan pendidikan, keagamaan, sopan
+            santun, kepahlawanan, kekompakan dan kebersamaan.
+          </p>
+
+          <img src="assets/images/aceh/tari2.png" alt="Tari Seudati" width="100%" />
+
+          <p>
+            Tari Seudati adalah salah satu tarian tradisional yang berasal
+            dari daerah Aceh. Tarian ini biasanya ditarikan oleh sekelompok
+            penari pria dengan gerakannya yang khas dan enerjik serta diiringi
+            oleh lantunan syair dan suara hentakan para penari. Tari Seudati
+            ini merupakan salah satu tarian tradisional yang cukup terkenal di
+            daerah Aceh, dan sering ditampilkan di berbagai acara, baik acara
+            adat, acara pertunjukan, dan acara budaya.
+          </p>
+
+          <h3>Bahasa Daerah</h3>
+
+          <p>
+            Bahasa daerah yang paling banyak penuturnya adalah bahasa Aceh
+            yang dipakai oleh suku Aceh. Selain itu juga terdapat bahasa Gayo,
+            Alas, Kluet, Singkil, Jamee dan Melayu Tamiang. Di Simeulue
+            terdapat 3 bahasa yaitu bahasa Devayan, Sigulai, dan Leukon.
+            Selain itu juga terdapat bahasa Haloban di Pulau Banyak. Beberapa
+            bahasa daerah dari bagian Indonesia lainnya juga dipertuturkan
+            oleh sebagian penduduk di Provinsi Aceh. Di antaranya, yaitu
+            bahasa Jawa yang tersebar di berbagai wilayah transmigrasi di
+            seluruh Aceh.
+          </p>
+
+          <h3>Tradisi Adat</h3>
+
+          <p>
+            Aceh merupakan kawasan yang sangat kaya dengan seni budaya. Aceh
+            mempunyai aneka tradisi salah satunya seperti Tradisi Peusijuek.
+            Peusijuek adalah sebuah prosesi adat dalam budaya masyarakat Aceh
+            yang masih dipraktikan hingga saat ini. Tradisi peusijuek ini
+            dilakukan pada hampir semua kegiatan adat dalam kehidupan
+            masyarakat di Aceh. Misalnya ketika memulai sebuah usaha,
+            menyelesaikan persengketaan, terlepas atau selesai dari musibah,
+            menempati rumah baru, merayakan kelulusan, memberangkatkan dan
+            menyambut kedatangan haji, kembalinya keluarga dari perantauan dan
+            masih banyak lagi.
+          </p>
+
+          <h3>Senjata Tradisional</h3>
+          <img src="assets/images/aceh/senjata.png" alt="Badik Tumbuk Lada" width="100%" />
+
+          <p>
+            Rencong adalah senjata tradisional bangsa Aceh, bentuknya
+            menyerupai huruf L, dan bila dilihat lebih dekat bentuknya
+            merupakan kaligrafi tulisan bismillah. Rencong termasuk dalam
+            kategori belati. Selain rencong, bangsa Aceh juga memiliki
+            beberapa senjata khas lainnya, seperti sikin panyang, peurise awe,
+            peurise teumaga, siwah, geuliwang dan peudeueng.
+          </p>
+
+          <h3>Lagu Daerah</h3>
+
+          <p>
+            Bungong Jeumpa adalah lagu daerah yang berasal dari Aceh. Bungong
+            Jeumpa dalam bahasa Aceh berarti bunga cempaka. Lagu ini memiliki
+            arti penting dalam budaya suku Aceh yang menggambarkan semangat
+            dan keindahan Tanah Aceh dan menjadi simbol bunga khas di
+            Kesultanan Aceh.
+          </p>
+
+          <h2>Kuliner</h2>
+          <hr />
+
+          <p>
+            Aceh mempunyai aneka jenis makanan yang khas. salah satu kuliner
+            khas Aceh yang juga sangat terkenal bahkan hingga ke mancanegara
+            adalah Mi Aceh, sejenis mi kuning basah yang diracik dengan bumbu
+            khas nan pedas
+          </p>
+          <img src="assets/images/aceh/kuliner.png" alt="Ikan Selais" width="100%" />
+
+          <p>
+            Selain itu makanan yang khas Aceh lain yakni, Timphan. Timphan
+            adalah penganan kecil sejenis lepat. Bahan untuk membuat timphan
+            terdiri dari tepung, pisang, dan santan. Semua bahan ini kemudian
+            diaduk-aduk sampai kenyal. Lalu dibuat memanjang dan di dalamnya
+            diisi dengan serikaya atau kelapa parut yang dicampur dengan gula.
+            Kemudian adonan ini dibungkus dengan daun pisang dan dikukus
+            (rebus tanpa direndam air) selama satu jam.
+          </p>
+
+          <h2>Destinasi Wisata</h2>
+          <hr />
+
+          <p>
+            Salah satu wisata alam yang terkenal di Aceh adalah wisata pantai,
+            pantai pasir putih yang terkenal diantaranya Pantai Lampuuk di
+            Aceh Besar dan Pantai Pasi Saka di Aceh Jaya.
+          </p>
+          <img src="assets/images/aceh/wisata.png" alt="Natuna" width="100%" />
+
+          <p>
+            Selain itu Aceh juga dikenal dengan cakupan hutan yang masih cukup
+            lestari seperti Taman Nasional Gunung Leuser. Beberapa satwa
+            endemis Sumatra masih lazim ditemukan di Aceh seperti orangutan,
+            gajah, harimau dan badak.
+          </p>
+          <img src="assets/images/aceh/wisata2.png" alt="Gunung Leuser" width="100%" />
+        </article>
+      </div>
+      <div class="col">
+        <nav id="toc" data-toggle="toc" class="sticky-top"></nav>
+      </div>
+    </div>
+  </div>
+  <!-- Navbar ToC -->
+  <!-- Navbar ToC -->
+
+  <!-- Footer -->
+  <footer>
+    <div class="container pb-2">
+      <div class="row justify-content-center">
+        <div class="col-md-5">
+          <h5 class="fw-semibold">CultureID</h5>
+          <p class="mb-0">
+            Jalan Pangeran Antasari, Ciapa Hayo, Kota Jakarta Selatan Daerah
+            Khusus Ibukota Jakarta 66666
+          </p>
+          <p class="mb-0">
+            <span class="fw-bold">Phone:</span> (62) 3132 2323 2332
+          </p>
+          <p><span class="fw-bold">Email:</span> cultureid@gmail.com</p>
+        </div>
+        <div class="col-md-3">
+          <h5 class="fw-semibold">Link Terkait</h5>
+          <ul class="navbar-nav">
+            <li class="border-bottom">
               <a class="nav-link" href="index.html">Beranda</a>
             </li>
-            <li class="nav-item">
+            <li class="border-bottom">
               <a class="nav-link" href="event.html">Event</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="provinsi.html">Provinsi</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Tentang.html">Kontak</a>
+            <li>
+              <a class="nav-link" href="provinsi.html">Provinsi</a>
             </li>
           </ul>
-          <form class="d-flex" role="search">
-            <input
-              class="form-control search"
-              type="search"
-              placeholder="Cari informasi..."
-              aria-label="Search"
-            />
-          </form>
         </div>
-      </div>
-    </nav>
-    <!-- Navbar -->
-
-    <div class="container p-4">
-      <div class="row">
-        <div class="col">
-          <aside>
-            <nav id="sidebar"></nav>
-            <hr style="color: #ff9900; height: 3px" />
-          </aside>
-        </div>
-        <div class="col">
-          <article>
-            <h1>Aceh</h1>
-
-            <p>
-              Aceh adalah sebuah provinsi di Indonesia yang ibu kotanya berada
-              di Banda Aceh. Aceh merupakan salah satu provinsi di Indonesia
-              yang diberi status sebagai daerah istimewa dan juga diberi
-              kewenangan otonomi khusus. Aceh terletak di ujung utara pulau
-              Sumatra dan merupakan provinsi paling barat di Indonesia. Menurut
-              hasil sensus Badan Pusat Statistik tahun 2021, jumlah penduduk
-              provinsi ini sekitar 5.333.733 jiwa. Letaknya dekat dengan
-              Kepulauan Andaman dan Nikobar di India dan terpisahkan oleh Laut
-              Andaman. Aceh berbatasan dengan Teluk Benggala dan Laut Andaman di
-              sebelah utara, Samudra Hindia di sebelah barat, Selat Malaka di
-              sebelah timur, dan Sumatra Utara di sebelah tenggara dan selatan.
-            </p>
-
-            <h2>Informasi Umum</h2>
-            <hr />
-            <table border="">
-              <tr>
-                <th>Nama</th>
-                <th>Kode Wilayah Indonesia</th>
-                <th>Kode Internasional</th>
-                <th>Singkatan Umum</th>
-                <th>Ibu Kota</th>
-                <th>Hari Jadi</th>
-                <th>Lambang</th>
-              </tr>
-              <tr>
-                <td>Aceh</td>
-                <td>11</td>
-                <td>ID-AC</td>
-                <td>-</td>
-                <td>Banda Aceh</td>
-                <td>-</td>
-                <td>
-                  <img
-                    src="assets/images/aceh/logo.png"
-                    alt="Logo Kepri"
-                    width="50"
-                  />
-                </td>
-              </tr>
-            </table>
-
-            <h2>Budaya</h2>
-            <hr />
-
-            <h3>Rumah Adat</h3>
-            <img
-              src="assets/images/aceh/rumah.png"
-              alt="Rumah Belah Bubung"
-              width="100%"
-            />
-
-            <p>
-              Rumah tradisional Aceh dinamakan Rumoh Aceh. Rumah ini bertipe
-              rumah panggung dengan 3 bagian utama dan 1 bagian tambahan. Tiga
-              bagian utama dari rumah Aceh yaitu seuramoë keuë (serambi depan),
-              seuramoë teungoh (serambi tengah) dan seuramoë likôt (serambi
-              belakang). Sedangkan 1 bagian tambahannya yaitu rumoh dapu (rumah
-              dapur).
-            </p>
-
-            <h3>Tarian Tradisional</h3>
-
-            <p>
-              Aceh memiliki banyak tarian dari 9 etnis yang ada. Beberapa tarian
-              yang terkenal di tingkat nasional dan bahkan dunia merupakan
-              tarian yang berasal dari Aceh, seperti Tari Saman dan Tari
-              Seudati.
-            </p>
-
-            <img
-              src="assets/images/aceh/tari.png"
-              alt="Tari Seudati"
-              width="100%"
-            />
-
-            <p>
-              Tari Saman merupakan salah satu media untuk menyampaikan pesan
-              atau dakwah. Tarian ini mencerminkan pendidikan, keagamaan, sopan
-              santun, kepahlawanan, kekompakan dan kebersamaan.
-            </p>
-
-            <img
-              src="assets/images/aceh/tari2.png"
-              alt="Tari Seudati"
-              width="100%"
-            />
-
-            <p>
-              Tari Seudati adalah salah satu tarian tradisional yang berasal
-              dari daerah Aceh. Tarian ini biasanya ditarikan oleh sekelompok
-              penari pria dengan gerakannya yang khas dan enerjik serta diiringi
-              oleh lantunan syair dan suara hentakan para penari. Tari Seudati
-              ini merupakan salah satu tarian tradisional yang cukup terkenal di
-              daerah Aceh, dan sering ditampilkan di berbagai acara, baik acara
-              adat, acara pertunjukan, dan acara budaya.
-            </p>
-
-            <h3>Bahasa Daerah</h3>
-
-            <p>
-              Bahasa daerah yang paling banyak penuturnya adalah bahasa Aceh
-              yang dipakai oleh suku Aceh. Selain itu juga terdapat bahasa Gayo,
-              Alas, Kluet, Singkil, Jamee dan Melayu Tamiang. Di Simeulue
-              terdapat 3 bahasa yaitu bahasa Devayan, Sigulai, dan Leukon.
-              Selain itu juga terdapat bahasa Haloban di Pulau Banyak. Beberapa
-              bahasa daerah dari bagian Indonesia lainnya juga dipertuturkan
-              oleh sebagian penduduk di Provinsi Aceh. Di antaranya, yaitu
-              bahasa Jawa yang tersebar di berbagai wilayah transmigrasi di
-              seluruh Aceh.
-            </p>
-
-            <h3>Tradisi Adat</h3>
-
-            <p>
-              Aceh merupakan kawasan yang sangat kaya dengan seni budaya. Aceh
-              mempunyai aneka tradisi salah satunya seperti Tradisi Peusijuek.
-              Peusijuek adalah sebuah prosesi adat dalam budaya masyarakat Aceh
-              yang masih dipraktikan hingga saat ini. Tradisi peusijuek ini
-              dilakukan pada hampir semua kegiatan adat dalam kehidupan
-              masyarakat di Aceh. Misalnya ketika memulai sebuah usaha,
-              menyelesaikan persengketaan, terlepas atau selesai dari musibah,
-              menempati rumah baru, merayakan kelulusan, memberangkatkan dan
-              menyambut kedatangan haji, kembalinya keluarga dari perantauan dan
-              masih banyak lagi.
-            </p>
-
-            <h3>Senjata Tradisional</h3>
-            <img
-              src="assets/images/aceh/senjata.png"
-              alt="Badik Tumbuk Lada"
-              width="100%"
-            />
-
-            <p>
-              Rencong adalah senjata tradisional bangsa Aceh, bentuknya
-              menyerupai huruf L, dan bila dilihat lebih dekat bentuknya
-              merupakan kaligrafi tulisan bismillah. Rencong termasuk dalam
-              kategori belati. Selain rencong, bangsa Aceh juga memiliki
-              beberapa senjata khas lainnya, seperti sikin panyang, peurise awe,
-              peurise teumaga, siwah, geuliwang dan peudeueng.
-            </p>
-
-            <h3>Lagu Daerah</h3>
-
-            <p>
-              Bungong Jeumpa adalah lagu daerah yang berasal dari Aceh. Bungong
-              Jeumpa dalam bahasa Aceh berarti bunga cempaka. Lagu ini memiliki
-              arti penting dalam budaya suku Aceh yang menggambarkan semangat
-              dan keindahan Tanah Aceh dan menjadi simbol bunga khas di
-              Kesultanan Aceh.
-            </p>
-
-            <h2>Kuliner</h2>
-            <hr />
-
-            <p>
-              Aceh mempunyai aneka jenis makanan yang khas. salah satu kuliner
-              khas Aceh yang juga sangat terkenal bahkan hingga ke mancanegara
-              adalah Mi Aceh, sejenis mi kuning basah yang diracik dengan bumbu
-              khas nan pedas
-            </p>
-            <img
-              src="assets/images/aceh/kuliner.png"
-              alt="Ikan Selais"
-              width="100%"
-            />
-
-            <p>
-              Selain itu makanan yang khas Aceh lain yakni, Timphan. Timphan
-              adalah penganan kecil sejenis lepat. Bahan untuk membuat timphan
-              terdiri dari tepung, pisang, dan santan. Semua bahan ini kemudian
-              diaduk-aduk sampai kenyal. Lalu dibuat memanjang dan di dalamnya
-              diisi dengan serikaya atau kelapa parut yang dicampur dengan gula.
-              Kemudian adonan ini dibungkus dengan daun pisang dan dikukus
-              (rebus tanpa direndam air) selama satu jam.
-            </p>
-
-            <h2>Destinasi Wisata</h2>
-            <hr />
-
-            <p>
-              Salah satu wisata alam yang terkenal di Aceh adalah wisata pantai,
-              pantai pasir putih yang terkenal diantaranya Pantai Lampuuk di
-              Aceh Besar dan Pantai Pasi Saka di Aceh Jaya.
-            </p>
-            <img
-              src="assets/images/aceh/wisata.png"
-              alt="Natuna"
-              width="100%"
-            />
-
-            <p>
-              Selain itu Aceh juga dikenal dengan cakupan hutan yang masih cukup
-              lestari seperti Taman Nasional Gunung Leuser. Beberapa satwa
-              endemis Sumatra masih lazim ditemukan di Aceh seperti orangutan,
-              gajah, harimau dan badak.
-            </p>
-            <img
-              src="assets/images/aceh/wisata2.png"
-              alt="Gunung Leuser"
-              width="100%"
-            />
-          </article>
-        </div>
-        <div class="col">
-          <nav id="toc" data-toggle="toc" class="sticky-top"></nav>
+        <div class="col-md-3">
+          <h5 class="fw-semibold">Sosial Media</h5>
+          <a href="https://instagram.com/instagram" target="_blank" class="mx-1"><img
+              src="assets/images/ic_instagram.svg" alt="" /></a>
+          <a href="https://www.tiktok.com/@tiktok?lang=id-ID" target="_blank" class="mx-1"><img
+              src="assets/images/ic_tiktok.svg" alt="" /></a>
+          <a href="https://www.youtube.com/@YouTube" target="_blank" class="mx-1"><img
+              src="assets/images/ic_youtube.svg" alt="" /></a>
         </div>
       </div>
     </div>
-    <!-- Navbar ToC -->
-    <!-- Navbar ToC -->
+    <div class="copyright">
+      <p class="mb-0">
+        <strong>&copy; CultureID.</strong> All Right Reserverd
+      </p>
+      <p class="mb-0" style="font-size: 12px">
+        Developed by Group 11 Afternoon C
+      </p>
+    </div>
+  </footer>
+  <!-- Footer -->
 
-    <!-- Footer -->
-    <footer>
-      <div class="container pb-2">
-        <div class="row justify-content-center">
-          <div class="col-md-5">
-            <h5 class="fw-semibold">CultureID</h5>
-            <p class="mb-0">
-              Jalan Pangeran Antasari, Ciapa Hayo, Kota Jakarta Selatan Daerah
-              Khusus Ibukota Jakarta 66666
-            </p>
-            <p class="mb-0">
-              <span class="fw-bold">Phone:</span> (62) 3132 2323 2332
-            </p>
-            <p><span class="fw-bold">Email:</span> cultureid@gmail.com</p>
-          </div>
-          <div class="col-md-3">
-            <h5 class="fw-semibold">Link Terkait</h5>
-            <ul class="navbar-nav">
-              <li class="border-bottom">
-                <a class="nav-link" href="index.html">Beranda</a>
-              </li>
-              <li class="border-bottom">
-                <a class="nav-link" href="event.html">Event</a>
-              </li>
-              <li>
-                <a class="nav-link" href="provinsi.html">Provinsi</a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-3">
-            <h5 class="fw-semibold">Sosial Media</h5>
-            <a
-              href="https://instagram.com/instagram"
-              target="_blank"
-              class="mx-1"
-              ><img src="assets/images/ic_instagram.svg" alt=""
-            /></a>
-            <a
-              href="https://www.tiktok.com/@tiktok?lang=id-ID"
-              target="_blank"
-              class="mx-1"
-              ><img src="assets/images/ic_tiktok.svg" alt=""
-            /></a>
-            <a
-              href="https://www.youtube.com/@YouTube"
-              target="_blank"
-              class="mx-1"
-              ><img src="assets/images/ic_youtube.svg" alt=""
-            /></a>
-          </div>
-        </div>
-      </div>
-      <div class="copyright">
-        <p class="mb-0">
-          <strong>&copy; CultureID.</strong> All Right Reserverd
-        </p>
-        <p class="mb-0" style="font-size: 12px">
-          Developed by Group 11 Afternoon C
-        </p>
-      </div>
-    </footer>
-    <!-- Footer -->
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
+</body>
 
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script>
-  </body>
 </html>

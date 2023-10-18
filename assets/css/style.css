@@ -1,120 +1,120 @@
 * {
-    font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 header {
-    background-image: url('../images/background2.jpg');
-    min-height: 100vh;
-    padding: 250px 0 165px;
+  background-image: url('../images/background2.jpg');
+  min-height: 100vh;
+  padding: 250px 0 165px;
 }
 
 header h1 {
-    font-family: 'Playfair Display', serif;
-    color: #ffffff;
-    font-weight: 600;
-    font-size: 48px;
+  font-family: 'Playfair Display', serif;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 48px;
 }
 header p {
-    font-size: 14px;
-    color: #f8f8f8;
-    font-weight: 500;
+  font-size: 14px;
+  color: #f8f8f8;
+  font-weight: 500;
 }
 
 header .btn-eksplorasi {
-    background-color: #EE9322;
-    width: 252px;
-    height: 45px;
-    padding: 10px 0;
-    color: #FFFFFF;
-    font-weight: bold;
+  background-color: #EE9322;
+  width: 252px;
+  height: 45px;
+  padding: 10px 0;
+  color: #FFFFFF;
+  font-weight: bold;
 }
 
 header .btn-eksplorasi:hover {
-    background-color: #e67e00;
-    color: #FFFFFF;
+  background-color: #e67e00;
+  color: #FFFFFF;
 }
 
 .content h1 {
-    font-family: 'Playfair Display', serif;
-    color: #FF9900;
-    font-weight: 600;
-    font-size: 46px;
+  font-family: 'Playfair Display', serif;
+  color: #FF9900;
+  font-weight: 600;
+  font-size: 46px;
 }
 
 .content p {
-    font-size: 14px;
-    font-weight: lighter;
+  font-size: 14px;
+  font-weight: lighter;
 }
 
 .card {
-    width: 500px;
-    height: 240px;
+  width: 500px;
+  height: 240px;
 }
 .card p {
-    color: #323232;
-    font-size: 16px;
-    font-weight: 400;
+  color: #323232;
+  font-size: 16px;
+  font-weight: 400;
 }
 .navbar-brand {
-    color: #FF9900;
-    font-weight: bold;
+  color: #FF9900;
+  font-weight: bold;
 }
 
 .nav-item {
-    margin-right: 30px;
+  margin-right: 30px;
 }
 
 .nav-item a {
-    color: #202020;
+  color: #202020;
 }
 
 .nav-item.beranda a {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 .navbar-nav .nav-item a.active {
-    color: #FF9900 !important;
-    font-weight: bold;
+  color: #FF9900 !important;
+  font-weight: bold;
 }
 
 .search {
-    border-radius: 50px;
+  border-radius: 50px;
 }
 
 .form-control::placeholder {
-    font-size: 14px;
-    font-weight: light;
-    color: #A3A3A3;
+  font-size: 14px;
+  font-weight: light;
+  color: #A3A3A3;
 }
 
 .content {
-    min-height: 80vh;
+  min-height: 80vh;
 }
 
 footer {
-    background-color: #EE9322;
-    color: #FFF;
-    padding-top: 32px;
+  background-color: #EE9322;
+  color: #FFF;
+  padding-top: 32px;
 }
 
 .copyright {
-    text-align: center;
-    height: 78px;
-    background-color: #E58A00;
-    color: #FFF;
-    padding: 20px 0;
+  text-align: center;
+  height: 78px;
+  background-color: #E58A00;
+  color: #FFF;
+  padding: 20px 0;
 }
 
 .btn-kirim {
-    background-color: #FF9900;
-    color: #FFF;
-    border-radius: 4px;
-    height: 40px;
+  background-color: #FF9900;
+  color: #FFF;
+  border-radius: 4px;
+  height: 40px;
 }
 
 .btn-kirim:hover {
-    background-color: rgb(240, 144, 0);
-    color: #FFF;
+  background-color: rgb(240, 144, 0);
+  color: #FFF;
 }
 
 
@@ -122,161 +122,175 @@ footer {
 
 /* Halaman Detail Event */
 .section-details-header {
-    background-color: #f1f1f1;
-    min-height: 300px;
-  }
-  
-  .section-details-content {
-    margin-top: -250px;
-    min-height: 100vh;
-    margin-bottom: 100px;
-  }
+  background-color: #f1f1f1;
+  min-height: 300px;
+}
+
+.section-details-content {
+  margin-top: -250px;
+  min-height: 100vh;
+  margin-bottom: 100px;
+}
 
 
-  .section-details-content .breadcrumb {
-    margin-bottom: 30px;
-  }
-  .section-details-content .breadcrumb-item.active {
-    font-weight: bold;
-    color: #FF9900;
-  }
-  .section-details-content .card-details {
-    width: 100%;
-    height: 100%;
-    padding: 30px;
-    border-radius: 11px;
-  }
-  .section-details-content .card-details h1 {
-    color: #071C42;
-    font-size: 26px;
-  }
-  .section-details-content .card-details h2 {
-    font-size: 20px;
-  }
-  .section-details-content .card-details p {
-    font-size: 18px;
-    color: #B1B1B1;
-  }
-  .section-details-content .gallery .xzoom-container {
-    display: block;
-  }
-  .section-details-content .gallery .xzoom-container .xzoom {
-    width: 100%;
-    box-shadow: none;
-    margin-bottom: 10px;
-  }
-  .section-details-content .gallery .xzoom-container .xactive {
-    border: 4px solid #1abc9c;
-    box-shadow: none;
-  }
+.section-details-content .breadcrumb {
+  margin-bottom: 30px;
+}
+.section-details-content .breadcrumb-item.active {
+  font-weight: bold;
+  color: #FF9900;
+}
+.section-details-content .card-details {
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  border-radius: 11px;
+}
+.section-details-content .card-details h1 {
+  color: #071C42;
+  font-size: 26px;
+}
+.section-details-content .card-details h2 {
+  font-size: 20px;
+}
+.section-details-content .card-details p {
+  font-size: 18px;
+  color: #B1B1B1;
+}
+.section-details-content .gallery .xzoom-container {
+  display: block;
+}
+.section-details-content .gallery .xzoom-container .xzoom {
+  width: 100%;
+  box-shadow: none;
+  margin-bottom: 10px;
+}
+.section-details-content .gallery .xzoom-container .xactive {
+  border: 4px solid #1abc9c;
+  box-shadow: none;
+}
 
-  .section-details-content .features {
-    margin-top: 20px;
-  }
-  .section-details-content .features h3 {
-    font-size: 18px;
-    color: #071C42;
-    margin-bottom: 0;
-  }
-  .section-details-content .features p {
-    margin-bottom: 0;
-  }
-  .section-details-content .features .description {
-    margin-left: 10px;
-    overflow: hidden;
-    float: left;
-  }
-  .section-details-content .features .features-image {
-    float: left;
-  }
+.section-details-content .features {
+  margin-top: 20px;
+}
+.section-details-content .features h3 {
+  font-size: 18px;
+  color: #071C42;
+  margin-bottom: 0;
+}
+.section-details-content .features p {
+  margin-bottom: 0;
+}
+.section-details-content .features .description {
+  margin-left: 10px;
+  overflow: hidden;
+  float: left;
+}
+.section-details-content .features .features-image {
+  float: left;
+}
 
-  .section-details-content .card-right {
-    height: auto;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-  }
-  .section-details-content .join-container {
-    margin-top: -16px;
-  }
-  .section-details-content .join-container .btn-join-now {
-    width: 100%;
-    background-color: #FF9E53;
-    color: #fff;
-    border-radius: 0;
-  }
-  .section-details-content .join-container .btn-join-now:hover {
-    background-color: #ffb57c;
-    color: #fff;
-  }
+.section-details-content .card-right {
+  height: auto;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.section-details-content .join-container {
+  margin-top: -16px;
+}
+.section-details-content .join-container .btn-join-now {
+  width: 100%;
+  background-color: #FF9E53;
+  color: #fff;
+  border-radius: 0;
+}
+.section-details-content .join-container .btn-join-now:hover {
+  background-color: #ffb57c;
+  color: #fff;
+}
 /* Halaman Detail Event */
 
-/* Isi konten tentang kami */
-.content1 {
-  margin: 40px 10%;
-  padding: 0px 20px;
-  font-family: Poppins;
-  line-height: 4vh;
+
+
+/* Halaman Tentang */
+.tentang h1 {
+font-family: 'Playfair Display', serif;
+color: #FF9900;
+font-weight: 600;
+font-size: 48px;
+}
+.tentang p {
+font-size: 14px;
+color: #44494C;
+font-weight: 400;
+}
+.tentang .misi li {
+font-size: 14px;
+color: #44494C;
+font-weight: 400;
+}
+.background-tim {
+background-color: #F5F5F5;
+min-height: 660px;
+}
+.tim {
+margin-top: -650px;
+}
+
+.isi {
+margin-top: 300px;
+}
+
+.tim h1 {
+font-family: 'Playfair Display', serif;
+color: #FF9900;
+font-weight: 600;
+font-size: 48px;
+}
+
+.tim p {
+font-size: 14px;
+color: #44494C;
+font-weight: 400;
+}
+
+.tim .kotak {
+width: 300px;
+height: 280px;
+background-color: #FFF;
+border-radius: 20px;
+box-sizing: border-box;
+}
+
+.tim .deskripsi {
+margin-top: 16px;
+}
+.tim .deskripsi h5 {
+font-weight: 600;
+font-size: 20px;
+}
+.tim .deskripsi p {
+font-size: 16px;
+color: #5E5E5E;
+}
+.tim .kotak .link {
+width: 300px;
+height: 52px;
+background-color: #EE9322;
+border-bottom-left-radius: 20px;
+border-bottom-right-radius: 20px;
 }
 
 
-.content1 h2 {
-  font-size: 50px;
-  color: #FF9900;
-  font-family: fairdisplay;
-  text-align: center;
+.kontak h1 {
+font-family: 'Playfair Display', serif;
+color: #FF9900;
+font-weight: 600;
+font-size: 48px;
 }
 
-.content1 h3 {
-  font-size: 14px;
-  color: #6C6C6C;
-  font-family: Poppins;
-  text-align: center;
-  line-height: 4vh;
+.kontak p {
+font-size: 14px;
+color: #44494C;
+font-weight: 400;
 }
-
-.content2 {
-  font-size: 16px;
-  font-family: Poppins;
-  color: #6C6C6C;
-  display: flex;
-  margin: 0px 0px 50px;
-
-}
-
-.content3 {
-  margin: 0px 5px 50px;
-  padding: 10px;
-  text-align: justify;
-}
-
-.content3 p {
-  padding-right: 120px;
-}
-
-.content3a {
-  margin: 0px;
-  padding: 10px;
-  text-align: justify;
-}
-
-.content3a p {
-  padding-left: 14px;
-}
-
-/* Akhir tentang kami */
-
-/* Tim kami */
-.content4 h2 {
-  font-size: 50px;
-  font-family: fairdisplay;
-  text-align: center;
-  color: #FF9900;
-}
-
-.content4 p {
-  font-size: 14px;
-  font-family: Poppins;
-  text-align: center;
-  color: #6C6C6C;
-}
-
