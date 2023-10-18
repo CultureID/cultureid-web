@@ -10,8 +10,8 @@ document.addEventListener("DOMContentLoaded", (e) => {
     let provinceHTML = item.provinces
       .map((province) => {
         return `
-            <li ${provinceActive == province.slug ? 'class="active"' : ""}">
-                <a class="nav-link" href="${province.slug}">${province.name}</a>
+            <li ${provinceActive == province.slug ? 'class="active"' : ""}>
+                <a class="nav-link" href="provinsi.html?provinsi=${province.slug}">${province.name}</a>
             </li>
         `;
       })
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
     let islandHTML = `
         <li>
-            <a class="nav-link" href="${item.island_slug}">${item.island}</a>
+            <a class="nav-link" href="#">${item.island}</a>
             <ul class="nav navbar-nav">
                 ${provinceHTML}
             </ul>
