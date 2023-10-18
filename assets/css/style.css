@@ -116,3 +116,96 @@ footer {
     background-color: rgb(240, 144, 0);
     color: #FFF;
 }
+
+
+
+
+/* Halaman Detail Event */
+.section-details-header {
+    background-color: #f1f1f1;
+    min-height: 300px;
+  }
+  
+  .section-details-content {
+    margin-top: -250px;
+    min-height: 100vh;
+    margin-bottom: 100px;
+  }
+
+
+  .section-details-content .breadcrumb {
+    margin-bottom: 30px;
+  }
+  .section-details-content .breadcrumb-item.active {
+    font-weight: bold;
+    color: #FF9900;
+  }
+  .section-details-content .card-details {
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    border-radius: 11px;
+  }
+  .section-details-content .card-details h1 {
+    color: #071C42;
+    font-size: 26px;
+  }
+  .section-details-content .card-details h2 {
+    font-size: 20px;
+  }
+  .section-details-content .card-details p {
+    font-size: 18px;
+    color: #B1B1B1;
+  }
+  .section-details-content .gallery .xzoom-container {
+    display: block;
+  }
+  .section-details-content .gallery .xzoom-container .xzoom {
+    width: 100%;
+    box-shadow: none;
+    margin-bottom: 10px;
+  }
+  .section-details-content .gallery .xzoom-container .xactive {
+    border: 4px solid #1abc9c;
+    box-shadow: none;
+  }
+
+  .section-details-content .features {
+    margin-top: 20px;
+  }
+  .section-details-content .features h3 {
+    font-size: 18px;
+    color: #071C42;
+    margin-bottom: 0;
+  }
+  .section-details-content .features p {
+    margin-bottom: 0;
+  }
+  .section-details-content .features .description {
+    margin-left: 10px;
+    overflow: hidden;
+    float: left;
+  }
+  .section-details-content .features .features-image {
+    float: left;
+  }
+
+  .section-details-content .card-right {
+    height: auto;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .section-details-content .join-container {
+    margin-top: -16px;
+  }
+  .section-details-content .join-container .btn-join-now {
+    width: 100%;
+    background-color: #FF9E53;
+    color: #fff;
+    border-radius: 0;
+  }
+  .section-details-content .join-container .btn-join-now:hover {
+    background-color: #ffb57c;
+    color: #fff;
+  }
+/* Halaman Detail Event */

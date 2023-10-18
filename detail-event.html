@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/xzoom.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <title>CultureID</title>
@@ -46,50 +47,114 @@
 
 
     <!-- Isi kontennya -->
-    <section class="content">
-        <div class="container mt-5">
+    <section class="section-details-header"></section>
+    <section class="section-details-content">
+        <div class="container">
             <div class="row">
                 <div class="col">
-                    <h1 style="font-weight: 600; font-size: 32px; color: #44494C;">Kauman Batik Festival</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item">Event</li>
+                            <li class="breadcrumb-item active" aria-current="page">Detail Event</li>
+                        </ol>
+                    </nav>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-5">
-                    <img src="assets/images/detail-event/1.png" width="500px">
-                    <div class="mt-3">
-                        <img src="assets/images/detail-event/2.png" alt="">
-                        <img src="assets/images/detail-event/3.png" alt="">
-                        <img src="assets/images/detail-event/4.png" alt="">
-                        <img src="assets/images/detail-event/5.png" alt="">
+                <div class="col-lg-8">
+                    <div class="card card-details">
+                        <h1>Kauman Batik Art Festival</h1>
+                        <h1>Kauman Batik Art Festival</h1>
+                        <p>Kota Surakarta, Jawa Tengah</p>
+                        <div class="gallery">
+                            <div class="xzoom-container">
+                                <img src="assets/images/detail-event/4.jpg" class="xzoom" id="xzoom-default"
+                                    xoriginal="assets/images/detail-event/4.jpg">
+                            </div>
+                            <div class="xzoom-thumbs">
+                                <a href="assets/images/detail-event/4.jpg">
+                                    <img src="assets/images/detail-event/4.jpg" class="xzoom-gallery" width="128"
+                                        xpreview="assets/images/detail-event/4.jpg">
+                                </a>
+                                <a href="assets/images/detail-event/2.jpg">
+                                    <img src="assets/images/detail-event/2.jpg" class="xzoom-gallery" width="128"
+                                        xpreview="assets/images/detail-event/2.jpg">
+                                </a>
+                                <a href="assets/images/detail-event/3.jpg">
+                                    <img src="assets/images/detail-event/3.jpg" class="xzoom-gallery" width="128"
+                                        xpreview="assets/images/detail-event/3.jpg">
+                                </a>
+                                <a href="assets/images/detail-event/1.png">
+                                    <img src="assets/images/detail-event/1.png" class="xzoom-gallery" width="128"
+                                        xpreview="assets/images/detail-event/1.png">
+                                </a>
+                                <a href="assets/images/detail-event/5.jpg">
+                                    <img src="assets/images/detail-event/5.jpg" class="xzoom-gallery" width="128"
+                                        xpreview="assets/images/detail-event/5.jpg">
+                                </a>
+                            </div>
+                        </div>
+                        <h2>Tentang Event</h2>
+                        <p>Setiap tahun, Perkumpulan Kampoeng Batik Kauman menggelar Kauman Batik Art Festival dalam
+                            rangka memperingati Hari Batik Nasional. KBAF telah berlangsung sejak tahun
+                            2018.<br><br>Rangkaian
+                            acara ditandai dengan Pranggok on the Street, yaitu mengenalkan batik dengan membawa dapur
+                            produksi ke jalan raya agar disaksikan oleh pengguna jalan, khususnya Jalan Hayam Wuruk.
+                            Acara lainnya bertempat di Kampoeng Batik Kauman ialah penampilan dari komunitas seni, stan
+                            fesyen dan kuliner, dll.<br><br>
+                            Informasi lebih lanjut dapat mengakses Instagram : @kampbatikkauman.</p>
+                        <div class="row features">
+                            <div class="col-md-4">
+                                <img src="assets/images/detail-event/ic_event.png" class="features-image" alt="Ticket">
+                                <div class="description">
+                                    <h3>Event Unggulan</h3>
+                                    <p>Pameran Batik</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 border-start">
+                                <img src="assets/images/detail-event/ic_bahasa.png" class="features-image"
+                                    alt="Language">
+                                <div class="description">
+                                    <h3>Bahasa</h3>
+                                    <p>Bahasa Indonesia</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4 border-start">
+                                <img src="assets/images/detail-event/ic_kuliner.png" class="features-image" alt="Foods">
+                                <div class="description">
+                                    <h3>Kuliner</h3>
+                                    <p>Khas Surakarta</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-7">
-                    <p class="fw-regular">Setiap tahun, Perkumpulan Kampoeng Batik Kauman menggelar Kauman Batik Art
-                        Festival dalam rangka memperingati Hari Batik Nasional. KBAF telah berlangsung sejak tahun
-                        2018.<br><br>
-                        Rangkaian acara ditandai dengan Pranggok on the Street, yaitu mengenalkan batik dengan membawa
-                        dapur produksi ke jalan raya agar disaksikan oleh pengguna jalan, khususnya Jalan Hayam Wuruk.
-                        Acara lainnya bertempat di Kampoeng Batik Kauman ialah penampilan dari komunitas seni, stan
-                        fesyen dan kuliner, dll.<br><br>
-                        Informasi lebih lanjut dapat mengakses Instagram : @kampbatikkauman.</p>
-                    <div class="row">
-                        <div class="col-md-6 mb-3">
-                            <img src="assets/images/ic_calendar.png"> 8 Oktober 2023
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <img src="assets/images/ic_benefit.png"> Air Mineral 220ml, Merchandise
-                        </div>
-                        <div class="col-md-6">
-                            <img src="assets/images/ic_time.png"> 13.00 - 15.00 WIB
-                        </div>
-                        <div class="col-md-6">
-                            <img src="assets/images/ic_location.png"> Kampung Batik Kauman, Surakarta
-                            Jawa Tengah
-                            <a href="https://maps.app.goo.gl/k7huYDeXyQpAWu288" target="_blank">Google Maps</a>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <img src="assets/images/ic_ticket.png"> Gratis
-                        </div>
+                <div class="col-lg-4">
+                    <div class="card card-details card-right">
+                        <h2>Informasi Event</h2>
+                        <table class="trip-information">
+                            <tr>
+                                <th width="10%"><img src="assets/images/detail-event/ic_tanggal.png"></th>
+                                <td width="90%">9 Oktobe 2023</td>
+                            </tr>
+                            <tr>
+                                <th width="10%"><img src="assets/images/detail-event/ic_waktu.png"></th>
+                                <td width="90%">13.00 - 15.00 WIB</td>
+                            </tr>
+                            <tr>
+                                <th width="10%"><img src="assets/images/detail-event/ic_benefit.png"></th>
+                                <td width="90%">Air Mineral 220ml</td>
+                            </tr>
+                            <tr>
+                                <th width="10%"><img src="assets/images/detail-event/ic_location.png"></th>
+                                <td width="90%">Kampung Batik Kauman, Surakarta
+                                    Jawa Tengah</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="join-container">
+                        <a href="https://maps.app.goo.gl/k7huYDeXyQpAWu288" target="_blank"
+                            class="btn btn-block btn-join-now mt-3 py-2">Detail Lokasi</a>
                     </div>
                 </div>
             </div>
@@ -142,8 +207,9 @@
     </footer>
     <!-- Footer -->
 
-
+    <script src="assets/js/code.jquery.com_jquery-3.7.1.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/xzoom.min.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', e => {
 
@@ -153,6 +219,14 @@
             const h1 = document.querySelector("h1")
 
             h1.innerText = eventName;
+        })
+        $(document).ready(function () {
+            $('.xzoom, .xzoom-gallery').xzoom({
+                zoomWidth: 500,
+                title: false,
+                tint: '#333',
+                xoffset: 15
+            })
         })
     </script>
 </body>
