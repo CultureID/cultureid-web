@@ -82,6 +82,11 @@ aside::-webkit-scrollbar-thumb {
   border-radius: 10px;
 }
 
+.breadcrumb-item.active {
+  font-weight: bold;
+  color: #ff9900;
+}
+
 .sidedivider {
   overflow: visible;
   padding: 0;

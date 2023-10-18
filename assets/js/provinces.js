@@ -6,6 +6,9 @@ document.addEventListener("DOMContentLoaded", (e) => {
   let params = new URLSearchParams(document.location.search);
   let provinceActive = params.get("provinsi");
 
+  let breadcrumbTitle = document.querySelector(".breadcrumb > .active")
+  breadcrumbTitle.innerText = provinceActive || "Kepulauan Riau";
+
   let generateIslandHTML = (item) => {
     let provinceHTML = item.provinces
       .map((province) => {

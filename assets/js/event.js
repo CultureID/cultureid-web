@@ -1,12 +1,10 @@
 import {
-    upcomingEvents as upcomingEventsDummy,
-    endedEvents as endedEventsDummy
+    events as eventsDummy
 } from './dummies.js';
 
-let upcomingEvents = document.getElementById('upcoming-events');
-let endedEvents = document.getElementById('ended-events');
+let events = document.getElementById('events');
 
-let card = (event) => {
+let card = (event, index) => {
 
     let date = new Date(event.date);
     let localDate = new Intl.DateTimeFormat('id-ID', {
@@ -16,7 +14,7 @@ let card = (event) => {
     }).format(date);
 
     return `
-    <div class="card border-0 mb-3" style="height: 380px; width: 230px; box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.25);">
+    <div class="card border-0 mb-4" style="height: 380px; box-shadow: 0px 1px 4px 0px rgba(0,0,0,0.25);">
         <img src="assets/images/events/${event.thumbnail}" class="card-img-top object-fit-cover" alt="${event.name}" height="150px">
         <div class="card-body d-flex flex-column justify-content-between">
             <p class="card-text fw-lighter" style="color: var(--light-color); font-size: 11pt">${localDate}</p>
@@ -30,17 +28,10 @@ let card = (event) => {
     `
 }
 
-upcomingEventsDummy.forEach((event) => {
+eventsDummy.forEach((event) => {
     let element = document.createElement('div');
+    // element.className = "col-md-4"
     element.innerHTML = card(event);
 
-    upcomingEvents.appendChild(element);
-})
-
-endedEventsDummy.forEach((event) => {
-    let element = document.createElement('div');
-    element.className = "col";
-    element.innerHTML = card(event);
-
-    endedEvents.appendChild(element);
+    events.appendChild(element);
 })

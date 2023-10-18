@@ -1,4 +1,4 @@
-const events = [
+export const events = [
     {
         name: "Grebek Maulud Yogyakarta",
         location: "Yogyakarta",
