@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
       .map((province) => {
         return `
             <li ${provinceActive == province.slug ? 'class="active"' : ""}>
-                <a class="nav-link" href="provinsi.html?provinsi=${province.slug}">${province.name}</a>
+                <a class="nav-link" href="${province.slug === 'aceh' ? 'provinsi-aceh.html?provinsi=aceh' : `provinsi.html?provinsi=${province.slug}`}">${province.name}</a>
             </li>
         `;
       })
