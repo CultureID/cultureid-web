@@ -7,7 +7,7 @@ export const events = [
         fee: 0,
         date: "2023-10-13",
         thumbnail: 'grebek-maulud.png',
-        url: "/detail-event.html?event=Grebek Maulud Yogyakarta"
+        url: "./detail-event.html?event=Grebek Maulud Yogyakarta"
     },
     {
         name: "Kauman Batik Art Festival",
@@ -17,7 +17,7 @@ export const events = [
         fee: 0,
         date: "2023-10-14",
         thumbnail: 'kauman-batik-art-festival.png',
-        url: "/detail-event.html?event=Kauman Batik Art Festival"
+        url: "./detail-event.html?event=Kauman Batik Art Festival"
     },
     {
         name: "Festival Kalipucang Wetan",
@@ -27,7 +27,7 @@ export const events = [
         fee: 0,
         date: "2023-10-13",
         thumbnail: 'festival-kalipucang-wetan.png',
-        url: "/detail-event.html?event=Festival Kalipucang Wetan"
+        url: "./detail-event.html?event=Festival Kalipucang Wetan"
     },
     {
         name: "Pameran Flona",
@@ -37,7 +37,7 @@ export const events = [
         fee: 0,
         date: "2023-10-16",
         thumbnail: 'pameran-flona.png',
-        url: "/detail-event.html?event=Pameran Flona"
+        url: "./detail-event.html?event=Pameran Flona"
     },
     {
         name: "Pameran Garis Ombak",
@@ -47,7 +47,7 @@ export const events = [
         fee: 0,
         date: "2023-09-30",
         thumbnail: 'pameran-garis-ombak.png',
-        url: "/detail-event.html?event=Pameran Garis Ombak"
+        url: "./detail-event.html?event=Pameran Garis Ombak"
     },
     {
         name: "Attack on Titan: The Final Exhibition",
@@ -57,7 +57,7 @@ export const events = [
         fee: 0,
         date: "2023-09-22",
         thumbnail: 'aot-the-final-exhibition.png',
-        url: "/detail-event.html?event=Attack on Titan: The Final Exhibition"
+        url: "./detail-event.html?event=Attack on Titan: The Final Exhibition"
     },
     {
         name: "Pameran Wisma Geha",
@@ -67,7 +67,7 @@ export const events = [
         fee: 0,
         date: "2023-09-21",
         thumbnail: 'pameran-wisma-geha.png',
-        url: "/detail-event.html?event=Pameran Wisma Geha"
+        url: "./detail-event.html?event=Pameran Wisma Geha"
     },
     {
         name: "Festival Pesona Raja Ampat",
@@ -77,7 +77,7 @@ export const events = [
         fee: 0,
         date: "2023-09-15",
         thumbnail: 'festival-pesona-raja-ampat.png',
-        url: "/detail-event.html?event=Festival Pesona Raja Ampat"
+        url: "./detail-event.html?event=Festival Pesona Raja Ampat"
     },
 ]
 
